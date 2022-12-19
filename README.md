@@ -1,4 +1,4 @@
-# project-madagascar-data-story
-Data story for our ADA project madagascar
+# project-SouvlADAki-data-story
+Data story for our ADA project SouvlADAki
 
-https://lobsterchampagne.github.io/project-madagascar-data-story/
+https://github.com/yannisban/wikispeedia-link-position
