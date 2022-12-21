@@ -30,6 +30,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <link href="assets/css/ourMark.css" rel="stylesheet">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph@1.70.17/dist/3d-force-graph.min.js"></script>
   <!--<script type="text/javascript" src="graph/graph-vis.js"></script>-->
 
@@ -52,9 +53,11 @@
     <<nav id="navbar" class="navbar nav-menu">
       <ul>
         <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class='bx bx-comment-detail'></i> <span>Introduction</span></a>
+        <li><a href="#about" class="nav-link scrollto"><i class='bx bx-comment-detail'></i>
+            <span>Introduction</span></a>
         </li>
-        <li><a href="#data" class="nav-link scrollto"><i class='bx bxs-bar-chart-alt-2'></i> <span>Data in numbers</span></a>
+        <li><a href="#data" class="nav-link scrollto"><i class='bx bxs-bar-chart-alt-2'></i> <span>Data in
+              numbers</span></a>
         </li>
         <li><a href="#LinkPositionAnalysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Link Position
               Analysis</span></a></li>
@@ -65,7 +68,7 @@
         <li><a href="#conclusion" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Conclusion</span></a></li>
         <li><a href="#links" class="nav-link scrollto"><i class="bx bx-link"></i> <span>Links</span></a></li>
       </ul>
-    </nav><!-- .nav-menu -->
+      </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
 
@@ -73,22 +76,24 @@
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Wikipedia navigation behavior</h1>
+      <p>Towards understanding user behavior by exploiting the visual position of links in Wikipedia pages</p>
       <p>How people <span class="typed"
-          data-typed-items="are navigating through Wikipedia?,are navigating through Wikispeedia?, searching behavior can be describe? "></span></p>
+          data-typed-items="are navigating through Wikipedia?,are navigating through Wikispeedia?, searching behavior can be described? "></span>
+      </p>
       <p>
         <small class="ml-3"><b>By:</b></small>
         <small class="ml-3">H. Allègre,</small>
         <small class="ml-3">I. Bantzis,</small>
-        <small class="ml-3">E. Chatzakis,</small>
+        <small class="ml-3">M. Chatzakis,</small>
         <small class="ml-3">B. Tornare</small>
       </p>
       <p style="font-size: 16px">Group: <b>souvlADAki</B></p>
-      <div class="imgMadagascar">
+      <!--<div class="imgMadagascar">
         <a href="https://www.youtube.com/watch?v=VRtnS0MHq_A" target="_blank">
           <img src="assets/img/favicon.png">
         </a>
         Press the logo <i class="bx bxs-left-top-arrow-circle" style="font-size: 20px; margin-top: 10px;"></i>
-      </div>
+      </div>-->
     </div>
   </section><!-- End Hero -->
 
@@ -103,15 +108,16 @@
           <p style="text-align: left;">
 
             Wikipedia is a place you can easily navigate through articles and information.
-            A game has been derivated through this navigation, called <a href="https://dlab.epfl.ch/wikispeedia/play/" target="_blank">Wikispeedia</a>. In this game, users are assigned
+            A game has been derivated through this navigation, called <a href="https://dlab.epfl.ch/wikispeedia/play/"
+              target="_blank">Wikispeedia</a>. In this game, users are assigned
             the task of reaching a given article from another source article, exclusively by clicking the links that
             they encounter at each article. The game is timed. A crucial aspect of it, is that the users click on links
             by thinking which of them are semantically related to their goal, using their common sense.
             In this work, we study how the visual position of those links in a page affects the decision of the user,
             and how they impact the outcome of the game.
 
-            <br></br>
-
+            <br>
+            <!--
           <div style="display: block; margin: auto; width: 80%; margin-bottom: 2em; margin-top: 2em;">
             <div style="width: 100%;">
               <a href="https://dlab.epfl.ch/wikispeedia/play/?article=Latin" target="_blank">
@@ -129,7 +135,7 @@
               However, this is not the only time where Elon and his statements have directly affected a financial asset.
             </div>
           </div>
-
+        
           <div style="display: flex; margin: auto; width: 80%; margin-bottom: 2em; margin-top: 3em;">
 
             <div style="width: 60%; text-align: right; margin-right: 2em;">
@@ -151,6 +157,7 @@
             </div>
           </div>
           </p>
+        -->
         </div>
 
         <div style="text-align: center; font-size: 100px; margin-top: -1em; margin-bottom: -0.2em;">---</div>
@@ -158,38 +165,26 @@
         <div class="row">
           <h3 style="text-align: left; margin-bottom: 1em;">Research questions</h3>
           <div class="col-lg-4">
-            <img src="assets/img/intro/profile-img.jpg" class="img-fluid" alt="">
+            <img src="assets/img/intro/path.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0">
 
             <div class="questions">
-              <p>
-                <b>How does the position of links in the HTML page of wikipedia affects the user behavior/selection?</b>
-                <br><span style="margin-left: 2em">Does Musk's quotes impact the stock price?
-                  <br><span style="margin-left: 2em">Is his negative quotes more hurtful than the gain from his positive
-                    ones?
-                    <br><span style="margin-left: 2em">Does the company size play a role in the amount of change in the
-                      stock price?
-              </p>
-              <p>
-                <b>Does Musk's quotes affect the popularity of companies?</b>
-              </p>
-              <p>
-                <b>Has his impact changed in any way?</b>
-                <br><span style="margin-left: 2em">Do his quotes have a bigger impact now than what they had in prior
-                  years?
-              </p>
+              <p>How does the position of links in the HTML page of Wikipedia affects the user behavior?</p>
+              <p>Are there specific sections in which their links are preferred by users when navigating the graph?</p>
+              <p>Are the results of visual link analysis on Wikispeedia similar or different with the ones already observed in the literature?</p>
+              <p>How our results on visual link analysis compare to analytics over the graph? Are the links that belong to the most "clicked" sections of the page also important in terms of graph analysis?</p>
             </div>
           </div>
         </div>
 
       </div>
     </section><!-- End Introduction Section -->
-
+   
     <section id="graph" class="about smallerWidthDisplay">
       <div class="container" id="graph-vis-id">
         <script>
-          /* const elem = document.getElementById("graph-vis-id");
+          /*const elem = document.getElementById("graph-vis-id");
           const Graph = ForceGraph3D()
             (elem)
             .graphData({ "nodes": [{ "name": "Myriel", "group": 1, "id": 1 }, { "name": "Napoleon", "group": 1, "id": 2 }], links: [{ "source": 1, "target": 2, "value": 1 }] })
@@ -207,10 +202,23 @@
                 3000  // ms transition duration
               );
             }); */
-
+            //var request = new XMLHttpRequest();
+            //request.open("GET", "graph/graph.json", false);
+            //request.send(null)
+            //var my_JSON_object = JSON.parse(request.responseText);
+            //header("Access-Control-Allow-Origin: *");
+            //$.getJSON("./graph/graph.json", function(json) {
+            //  console.log(json); // this will show the info it in firebug console
+            //});
           const myGraph = ForceGraph3D();
-          myGraph(document.getElementById("graph-vis-id")).
-            jsonUrl("https://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
+          myGraph(document.getElementById("graph-vis-id")).jsonUrl("http://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
+          //fetch("https://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
+          //.then((data) => myGraph(document.getElementById("graph-vis-id")).graphData(data));
+          //myGraph(document.getElementById("graph-vis-id")).graphData(my_JSON_object)
+          //var cors = new EnableCorsAttribute("*", "*", "*");
+          //config.EnableCors(cors);
+
+
         </script>
       </div>
     </section>

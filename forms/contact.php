@@ -7,6 +7,8 @@
   */
 
   // Replace contact@example.com with your real receiving email address
+  header("Access-Control-Allow-Origin: *");
+
   $receiving_email_address = 'contact@example.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
@@ -38,4 +40,6 @@
   $contact->add_message( $_POST['message'], 'Message', 10);
 
   echo $contact->send();
+
+ 
 ?>

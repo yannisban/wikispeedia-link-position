@@ -5,3 +5,11 @@ myGraph(/*<myDOMElement*/document.getElementById("graph-vis-id"))
   //.graphData(URL);
   . 
   jsonUrl(URL)
+
+test = {
+  "manos" : "nikos",
+  "manos" : [ 
+
+  {},{}]
+
+}
