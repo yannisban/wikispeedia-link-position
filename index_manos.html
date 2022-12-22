@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>WikiSpeedia</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/ourMark.css" rel="stylesheet">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/3d-force-graph@1.70.17/dist/3d-force-graph.min.js"></script>
+  <script type="text/javascript" src="graph/graph.js"></script>
+
+  <!-- =======================================================
+  * Template Name: MyResume - v4.7.0
+  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <!-- <button type="button" class="mobile-nav-toggle d-xl-none"><i class="bi bi-list mobile-nav-toggle"></i></button> -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav id="navbar" class="navbar nav-menu">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" class="nav-link scrollto"><i class='bx bx-comment-detail'></i>
+            <span>Introduction</span></a>
+        </li>
+        <li><a href="#data_presentation" class="nav-link scrollto"><i class='bx bxs-bar-chart-alt-2'></i>
+            <span>Wikispeedia Data</span></a>
+        </li>
+        <li><a href="#game-analysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Game Analysis
+              Analysis</span></a></li>
+        <li><a href="#visual-link-analysis" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Visual Link Position Analysis</span></a></li>
+        <li><a href="#conclusion" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Conclusion</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>Wikipedia visual link position and user navigation.</h1>
+      <p>Towards understanding user behavior by exploiting the visual position of links in Wikipedia pages</p>
+      <p>How people <span class="typed"
+          data-typed-items="are navigating through Wikipedia?, searching behavior can be described?"></span>
+      </p>
+      <p>
+        <small class="ml-3"><b>By:</b></small>
+        <small class="ml-3">H. Allègre,</small>
+        <small class="ml-3">I. Bantzis,</small>
+        <small class="ml-3">M. Chatzakis,</small>
+        <small class="ml-3">B. Tornare</small>
+      </p>
+      <p style="font-size: 16px">Group: <b>souvlADAki</B></p>
+      <div class="imgSouvladaki">
+        <a href="https://www.youtube.com/watch?v=VRtnS0MHq_A" target="_blank">
+          <img src="assets/img/favicon.png">
+        </a>
+        Press the logo <i class="bx bxs-left-top-arrow-circle" style="font-size: 20px; margin-top: 10px;"></i>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Introduction Section ======= -->
+    <section id="about" class="about smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Introduction</h2>
+          <p style="text-align: left;">
+
+            <!--Wikipedia is a place you can easily navigate through articles and information.
+            A game has been derivated through this navigation, called <a href="https://dlab.epfl.ch/wikispeedia/play/"
+            target="_blank">Wikispeedia</a>. In this game, users are assigned
+            the task of reaching a given article from another source article, exclusively by clicking the links that
+            they encounter in each article. A crucial aspect of it is that users click on links considering which of
+            them are semantically related to their goal, using their common sense. In this work, we study how the
+            visual position of those links in a page affects the decision of the user, and how they impact the outcome of the game.-->
+
+            Wikipedia is the biggest collection of human information openly available to the public. It is constantly
+            updated with new information
+            from the users, which results in an available online encyclopedia of an enormous size.
+
+            Wikipedia has been very atractive to computer scientists and data analysts, because of the links between the
+            article pages. From a graph perspective
+            the links between articles form a very interesting knowledge graph, which can be a subject of interesting
+            graph analysis research.
+
+            Recently, a research direction emerged in the path of understanding which links between articles are more
+            important i.e. which links connect semantically
+            similar articles. Scientists tried to find these semantically important links, by examining the user
+            navigation among those articles.
+
+            In this sense, a game called <a href="https://dlab.epfl.ch/wikispeedia/play/"
+              target="_blank">Wikispeedia</a> has been developed, which
+            challenges users to start from a given Wikipedia article and reach another article only by clicking the
+            links that appear in the current page.
+            This work managed to encapsulate common sense into the network of Wikipedia, and it provided insight about
+            semantically similar entities in the graph,
+            as well as the tactical behavior of users to reach their destination.
+
+            Although there has been a massive amount of research in such networks, a question remains unanswered:
+            <br>
+
+            <b>What is the visual positions of the clicked links? <br>How it their position in the pahe related to the
+              selection of the user?</b><br>
+
+            <br>
+            <br>
+            <br>
+          <div style="display: block; margin: auto; width: 100%; margin-bottom: 2em">
+            <h3 style="text-align: center; margin-bottom: 1em">Wikispeedia: A seemingly simple game</h3>
+            <div style="width: 90%; margin-left: auto; margin-right: auto">
+              <a href="https://dlab.epfl.ch/wikispeedia/play/" target="_blank">
+                <img src="assets/img/intro/WikiSpeedia.png" class="img-fluid" alt="" style="border: 1px solid black">
+              </a>
+            </div>
+            <div style="width: 80%; text-align: left; margin-left: auto; margin-right: auto; margin-top:1em">
+              <p>
+                Players browse Wikipedia pages, in which links are highlighted in yellow. Each article has
+                a number of links leading to a new article. The semantic knowledge of the word makes it
+                possible to do hypotheses on the probability to reach the Goal article.
+                <br>
+                In this example, the player must find the article "Amazon Basin" starting from the article
+                Constantine I. The path contains 7 links already visited (Constantine I > Great Britain >
+                Europe > Russia > United States > Gulf of Mexico > Spain > Latin).
+              </p>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <h3 style="text-align: center; margin-bottom: 1em;">Research questions</h3>
+            <div class="col-lg-4">
+              <img src="assets/img/intro/path.png" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-8 pt-4 pt-lg-0">
+              <div class="questions">
+                <ul>
+                  <li>How does the position of links in the page of affects the user behavior?</li>
+                  <li>Are there specific sections in which their links are preferred in navigation?</li>
+                  <li>Are the results of visual link analysis on Wikispeedia similar with the available literature?</li>
+                  <li>How our results on visual link analysis compare to analytics over the graph?</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+    </section><!-- End Introduction Section -->
+
+    <!-- <section id="graph" class="about smallerWidthDisplay">
+      
+      
+      <div class="container" id="graph-vis-id">
+        <script>
+          
+          
+            //const myGraph = ForceGraph3D();
+            //myGraph(document.getElementById("graph-vis-id")).graphData(GRAPH_JSON)//.jsonUrl("http://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
+          
+            //console.log(GRAPH_JSON)
+        </script>
+      </div>
+    </section>-->
+
+    <!-- ======= Data Presentation Section ======= -->
+    <section id="data_presentation" class="about smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Wikispeedia Data</h2>
+          <p style="text-align: left;">
+            The data generated by WikiSpeedia games are multiple.
+            On the one hand, a list of each article included in the game
+            is made available, as well as the list of all the links
+            that each article has with the others. On the other hand,
+            one can access a large amount of finished paths (respectively unfinished)
+            by the players. A path is considered finished (respectively not
+            finished) when the player manages to reach the goal article
+            (respectively does not manage to reach the goal article and
+            interrupts his game). In addition, we have access to a category list
+            (one or more) for each article; we also have access to the shortest
+            path matrix.
+          </p>
+        </div>
+
+    </section><!-- End Data Presentation Section -->
+
+    <!-- ======= Data in Number Section ======= -->
+    <section id="data_number" class="facts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>The data in numbers</h2>
+          <p>Here is a representation of available data in number. </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="count-box">
+              <i class='bx bxl-wikipedia'></i>
+              <span data-purecounter-start="0" data-purecounter-end="4604" data-purecounter-duration="1"
+                class="purecounter">4604</span>
+              <p>Number of Wikipedia articles in WikiSpeedia</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+            <div class="count-box">
+              <i class='bx bxs-user-check'></i>
+              <span data-purecounter-start="0" data-purecounter-end="51318" data-purecounter-duration="1"
+                class="purecounter">51318</span>
+              <p>Number of finished paths</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="count-box">
+              <i class='bx bxs-user-x'></i>
+              <span data-purecounter-start="0" data-purecounter-end="24875" data-purecounter-duration="1"
+                class="purecounter">24875</span>
+              <p>Number of unfinished paths</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Data in Number Section -->
+
+    <!-- ======= Wikispeedia Path Example Section ======= -->
+    <section id="testimonials" class="testimonials section-bg smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="subTitle subTitleOfSection">
+          <h2>Some example of WikiSpeedia games finished paths, with the number of links and the time required</h2>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  Africa > Coffee > Cancer > Human > Sleep (4 links, 105 seconds)
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  Pythagoras > Science > Pollution > Carbon_dioxide > Greenhouse_effect (4 links, 53 seconds)
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  Monty_Python > Democracy > Monarchy > Kuwait > Iraq > Saudi_Arabia > Afghanistan > Osama_bin_Laden (7
+                  links, 248 seconds)
+                </p>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Quotes Example Section -->
+
+    <!-- ======= Game Analysis Section Section ======= -->
+    <section id="game-analysis" class="about smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Game analysis</h2>
+          <p style="text-align: left;">
+            A user facing a Wikispeedia game challenge is unlikely to reach the final goal if he randomly click links
+            that they might seem
+            reasonable to follow.
+            In practise, users follow a specific strategy: In the early phase of the game, they try to reach pages with
+            high number of links, about a
+            general topic. This pages, called hubs, are crucial as the enormous amount of links they contain can lead
+            the users closer to their target.
+            After reaching those hubs, the users begin to "narrow-down" their search, in order to find the final goal
+            article.
+          </p>
+        </div>
+
+        <!--<div class="row">
+          <div class="col-lg-6">
+            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/plots/cat_click1.png" class="img-fluid img_display" alt="">
+          </div>
+        </div>-->
+
+       
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            The graph above presents the links of the page that the users visits in every step of the game. 
+            It is understood that in the early phases of the game users visit the hubs, while in later clicks
+            the search in narrowed down to more specific pages. 
+          </p>
+        </div>
+
+        
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/plots/cat_click1.png" class="img-fluid img_display" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/plots/cat_click6.png" class="img-fluid img_display" alt="">
+            </div>
+          </div>
+          <p style="text-align: left;">
+            Those graph present the categories of the visited pages after the some clicks of the game. 
+            The left graph shows the distribution of the selected categories in the first click of the game, while the graph on the right
+            shows the distribution after the sixth click.
+            We see that in the first click, <b>more than 17% of the clicks went to a country page!</b> <br>
+            In later phases of the game, for example in the sixth click, we see that the category percentages are normalized, and
+            the categories differ according to the type of the target article. The graph on the right indicates a phase of the game where the narrowing
+            down has started, and the users approaches more specific pages.
+            
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <h3>Okay, but where are those links?</h3>
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="50">
+            <div class="swiper-wrapper">
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    In the <b>lead</b>?
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    In the <b>main body</b>?
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    In the <b>infobox</b>?
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    In which <b>paragraph</b>?
+                  </p>
+                </div>
+              </div>
+  
+              </div><!-- End testimonial item -->
+  
+            
+          </div>
+        </div>
+
+        
+    </section> <!-- End Game Analysis Section -->
+
+    <section id="visual-link-analysis" class="about smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Visual Link Position Analysis</h2>
+          <p style="text-align: left;">
+            A wikipedia page has a specific structure, because it is divided in three important sections, lead, body and infobox. 
+            
+            Every one of those sections may contain links that a user could follow.
+            Normally, lead in on the top of the page, containing a descriptive paragraph about the 
+            current page with the corresponding links. Then, the body follows, containing multiple paragraphs and links.
+            The body of the page contains all the information available for this page. Finally, the infobox is a small frame at the right of the 
+            page, showing conclusive information about the article. Infoboxes sometimes contain links, but there are several cases where they only contain 
+            text.
+            In our data, approximately 1% of the links belong to the infobox section, thus we decided not to include them in our analysis. 
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/lead_body_click_loc.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            In the graph above we present how many links are located in the lead and in the body, and how many of them are clicked. We see 
+            that the users generally prefer the links in the lead. 
+          </p>
+        </div>
+
+        
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/par_scatter.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            The above scatter presents the ditribution of links among the paragraphs. We see that most of the links belong to the starting paragraphs 
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/plots/bar_percent_lead_body.png" class="img-fluid img_display" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/plots/lead_vs_body_links.png" class="img-fluid img_display" alt="">
+            </div>
+          </div>
+          <p style="text-align: left;">
+            ADD DESCRIPTION
+            
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/plots/par_loc_per_click.png" class="img-fluid img_display" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
+            </div>
+          </div>
+          <p style="text-align: left;">
+            ADD DESCRIPTION
+            
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/expected_vs_obs_clicks.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            ADD DESCRIPTION          
+          </p>
+        </div>
+
+        
+    </section> <!-- End Most Mentioned Section -->
+
+
+    <section id="conclusion" class="about smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Conclusion</h2>
+          <p style="text-align: left;">
+            Wikispeedia provides insight about the user behavior and navigation in Wikipedia pages using their commons sense. 
+            In this work we studies
+          </p>
+        </div>
+
+      </div>
+    </section> 
+
+  
+    <!-- ======= Usefull Links Section ======= 
+    <section id="links" class="services smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Usefull links</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
+            data-aos-delay="200">
+            <div class="icon-box iconbox-orange" style="width: 100%">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,582.0697525312426C382.5290701553225,586.8405444964366,449.9789794690241,525.3245884688669,502.5850820975895,461.55621195738473C556.606425686781,396.0723002908107,615.8543463187945,314.28637112970534,586.6730223649479,234.56875336149918C558.9533121215079,158.8439757836574,454.9685369536778,164.00468322053177,381.49747125262974,130.76875717737553C312.15926192815925,99.40240125094834,248.97055460311594,18.661163978235184,179.8680185752513,50.54337015887873C110.5421016452524,82.52863877960104,119.82277516462835,180.83849132639028,109.12597500060166,256.43424936330496C100.08760227029461,320.3096726198365,92.17705696193138,384.0621239912766,124.79988738764834,439.7174275375508C164.83382741302287,508.01625554203684,220.96474134820875,577.5009287672846,300,582.0697525312426">
+                  </path>
+                </svg>
+                <i class="bx bx-code"></i>
+              </div>
+              <h4><a href="https://github.com/epfl-ada/ada-2021-project-madagascar" target="_blank">Our Jupyter
+                  Notebook</a></h4>
+              <p>This link takes you to our Jupyter Notebook</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
+            data-aos-delay="300">
+            <div class="icon-box iconbox-pink" style="width: 100%">
+              <div class="icon">
+                <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke="none" stroke-width="0" fill="#f5f5f5"
+                    d="M300,541.5067337569781C382.14930387511276,545.0595476570109,479.8736841581634,548.3450877840088,526.4010558755058,480.5488172755941C571.5218469581645,414.80211281144784,517.5187510058486,332.0715597781072,496.52539010469104,255.14436215662573C477.37192572678356,184.95920475031193,473.57363656557914,105.61284051026155,413.0603344069578,65.22779650032875C343.27470386102294,18.654635553484475,251.2091493199835,5.337323636656869,175.0934190732945,40.62881213300186C97.87086631185822,76.43348514350839,51.98124368387456,156.15599469081315,36.44837278890362,239.84606092416172C21.716077023791087,319.22268207091537,43.775223500013084,401.1760424656574,96.891909868211,461.97329694683043C147.22146801428983,519.5804099606455,223.5754009179313,538.201503339737,300,541.5067337569781">
+                  </path>
+                </svg>
+                <i class="bx bx-globe"></i>
+              </div>
+              <h4><a href="https://dlab.epfl.ch/teaching/fall2021/cs401/" target="_blank">Course webpage</a></h4>
+              <p>This link takes you directly to the course webpage</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>End Usefull Links -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Wikipedia visual link position and user navigation</h3>
+      <p>H. Allegre, I. Bantzis, M. Chatzakis, B. Tornare</p>
+      <!--<p style="font-style: normal; font-size: 25px; margin-top: -1em;"><b>mADAgascar</b></p>-->
+      <img src="assets/img/meme.png" class="img-fluid" alt="" style="width: 30%; margin-top: -2em;">
+      <div class="credits" style="margin: 1em;">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
