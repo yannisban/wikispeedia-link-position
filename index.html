@@ -59,10 +59,12 @@
         <li><a href="#data_presentation" class="nav-link scrollto"><i class='bx bxs-bar-chart-alt-2'></i>
             <span>Wikispeedia Data</span></a>
         </li>
-        <li><a href="#game-analysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Game Analysis
-              Analysis</span></a></li>
-        <li><a href="#visual-link-analysis" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Visual Link Position Analysis</span></a></li>
-        <li><a href="#related-work" class="nav-link scrollto"><i class="bx bx-line-chart"></i> <span>Related Work</span></a></li>
+        <li><a href="#game-analysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Game Analysis</span></a>
+        </li>
+        <li><a href="#visual-link-analysis" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Visual Link
+              Position Analysis</span></a></li>
+        <li><a href="#related-work" class="nav-link scrollto"><i class="bx bx-line-chart"></i> <span>Related
+              Work</span></a></li>
         <li><a href="#conclusion" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Conclusion</span></a></li>
 
       </ul>
@@ -105,47 +107,66 @@
           <h2>Introduction</h2>
           <p style="text-align: left;">
 
-            <!--Wikipedia is a place you can easily navigate through articles and information.
-            A game has been derivated through this navigation, called <a href="https://dlab.epfl.ch/wikispeedia/play/"
-            target="_blank">Wikispeedia</a>. In this game, users are assigned
-            the task of reaching a given article from another source article, exclusively by clicking the links that
-            they encounter in each article. A crucial aspect of it is that users click on links considering which of
-            them are semantically related to their goal, using their common sense. In this work, we study how the
-            visual position of those links in a page affects the decision of the user, and how they impact the outcome of the game.-->
+            Wikipedia is the biggest crowd-supported encyclopedia openly available to the public. It is constantly
+            updated
+            with new material from its own users, while its enormous size and content includes most of the knowledge we
+            have available.
 
-            Wikipedia is the biggest collection of human information openly available to the public. It is constantly
-            updated with new information
-            from the users, which results in an available online encyclopedia of an enormous size.
-
-            Wikipedia has been very atractive to computer scientists and data analysts, because of the links between the
-            article pages. From a graph perspective
-            the links between articles form a very interesting knowledge graph, which can be a subject of interesting
-            graph analysis research.
-
-            Recently, a research direction emerged in the path of understanding which links between articles are more
-            important i.e. which links connect semantically
-            similar articles. Scientists tried to find these semantically important links, by examining the user
-            navigation among those articles.
-
-            In this sense, a game called <a href="https://dlab.epfl.ch/wikispeedia/play/"
-              target="_blank">Wikispeedia</a> has been developed, which
-            challenges users to start from a given Wikipedia article and reach another article only by clicking the
-            links that appear in the current page.
-            This work managed to encapsulate common sense into the network of Wikipedia, and it provided insight about
-            semantically similar entities in the graph,
-            as well as the tactical behavior of users to reach their destination.
-
-            Although there has been a massive amount of research in such networks, a question remains unanswered:
-            <br>
-
-            <b>What is the visual positions of the clicked links? <br>How it their position in the pahe related to the
-              selection of the user?</b><br>
+            Wikipedia has been very attractive to computer scientists and data analysts, because the links between the
+            wikipedia
+            pages form an vast knowledge graph, subject of interesting graph and network research.
 
             <br>
             <br>
+
+            Recent research has focused on locating the import links between articles, because such links expose
+            semantic
+            similarity between the entities of the graph. In order to locate this semantically similar entities through
+            their
+            links, scientists encorpoted users to navigate through the paths of the graph, and try to locate
+            semantically similar
+            entities using their common sense.
+
             <br>
+            <br>
+
+            In this direction, <a href="https://dlab.epfl.ch/wikispeedia/play/" target="_blank">Wikispeedia</a>
+            has been developed, an interactive game which challenges the users to use their common sense, by requiring
+            them
+            to reach a Wikipedia article starting from an initial one, only by using the links that appear in each page.
+
+            Wikispeedia managed to provide more insight about the semantic relationships between the entities of the
+            Wikipedia
+            graph, as well as the tactical behavior that users followed in order to win the game.
+
+            This work provided the scientific community with a dataset containing the Wikipedia graph and the game data
+            of the paths
+            that the users followed, enabling more research directions.
+
+            <br>
+            <br>
+
+            Using this dataset, and many more available data from Wikipedia, a massive amount of research is being
+            performed for
+            such networks, examing the semantic similarity of entities through the paths provided from the game data. In
+            the context of this
+            evolving field of research, some questions regarding the user behavior still remain unanswered:
+
+            <br>
+            <br>
+            <b>
+              - What is the position of the most clicked links?
+              <br>
+              - How the position of the links related to its usage in a path?
+            </b>
+
+            <br>
+            <br>
+            <br>
+
+
           <div style="display: block; margin: auto; width: 100%; margin-bottom: 2em">
-            <h3 style="text-align: center; margin-bottom: 1em">Wikispeedia: A seemingly simple game</h3>
+            <h3 style="text-align: center; margin-bottom: 1em">Wikispeedia: Just a simple game?</h3>
             <div style="width: 90%; margin-left: auto; margin-right: auto">
               <a href="https://dlab.epfl.ch/wikispeedia/play/" target="_blank">
                 <img src="assets/img/intro/WikiSpeedia.png" class="img-fluid" alt="" style="border: 1px solid black">
@@ -153,30 +174,43 @@
             </div>
             <div style="width: 80%; text-align: left; margin-left: auto; margin-right: auto; margin-top:1em">
               <p>
-                Players browse Wikipedia pages, in which links are highlighted in yellow. Each article has
-                a number of links leading to a new article. The semantic knowledge of the word makes it
-                possible to do hypotheses on the probability to reach the Goal article.
+                Players browse Wikipedia pages, in which links are highlighted in yellow, while each article has
+                a number of links leading to another article. Players start from an inital article and using their
+                semantic
+                intepretations of the relation between articles and their common sense they must reach the target
+                article the fastest way possible.
+                Although the idea might seem simple, the strategies and methods that the users follow in order to
+                win the game are really interesting.
                 <br>
                 In this example, the player must find the article "Amazon Basin" starting from the article
-                Constantine I. The path contains 7 links already visited (Constantine I > Great Britain >
-                Europe > Russia > United States > Gulf of Mexico > Spain > Latin).
+                "Constantine I". The path contains 7 links already visited (Constantine I > Great Britain >
+                Europe > Russia > United States > Gulf of Mexico > Spain > Latin), and now the player should choose the
+                next
+                link to follow, which supposingly will lead them closer to the final goal.
               </p>
             </div>
           </div>
 
+          <br>
+          <br>
 
           <div class="row">
-            <h3 style="text-align: center; margin-bottom: 1em;">Research questions</h3>
+            <h3 style="text-align: center; margin-bottom: 1em;">What are we trying to do?</h3>
+
             <div class="col-lg-4">
-              <img src="assets/img/intro/path.png" class="img-fluid" alt="">
+              <img src="assets/img/intro/path.svg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0">
               <div class="questions">
+                Through this work, we are trying to address a number of research questions, which
+                circle around our bacis point of interest:<br> <b>How the users navigate in a Wikispeedia game</b>.
+                <br>In detail, we are trying to address the following research points:
                 <ul>
-                  <li>How does the position of links in the page of affects the user behavior?</li>
-                  <li>Are there specific sections in which their links are preferred in navigation?</li>
-                  <li>Are the results of visual link analysis on Wikispeedia similar with the available literature?</li>
-                  <li>How our results on visual link analysis compare to analytics over the graph?</li>
+                  <li><i>How does the position of links in the page of affects the user behavior?</i></li>
+                  <li><i>Are there specific sections in which their links are preferred in navigation?</i></li>
+                  <li><i>Are the results of visual link analysis on Wikispeedia similar with the available
+                      literature?</i></li>
+                  <li><i>How our results on visual link analysis compare to analytics over the graph?</i></li>
                 </ul>
               </div>
             </div>
@@ -184,7 +218,8 @@
           </div>
 
         </div>
-    </section><!-- End Introduction Section -->
+    </section>
+    <!-- End Introduction Section -->
 
     <!-- <section id="graph" class="about smallerWidthDisplay">
       
@@ -208,7 +243,7 @@
         <div class="section-title">
           <h2>Wikispeedia Data</h2>
           <p style="text-align: left;">
-            The data generated by WikiSpeedia games are multiple.
+            <!--The data generated by WikiSpeedia games are multiple.
             On the one hand, a list of each article included in the game
             is made available, as well as the list of all the links
             that each article has with the others. On the other hand,
@@ -218,97 +253,104 @@
             (respectively does not manage to reach the goal article and
             interrupts his game). In addition, we have access to a category list
             (one or more) for each article; we also have access to the shortest
-            path matrix.
+            path matrix.-->
+
+            The Wikispeedia dataset contains multiple data. Among others,
+            it provides information about the articles, their categories and their links used
+            in the game, enabling us to recreate the whole Wikipedia graph.
+            In addition, we have available the path data of each game. The path data
+            contain information about if a path is finished or not, about the articles of the
+            path, the total time needed to reach the target or abandon the game and the backtracks
+            that were performed during a game.
+
+            <br>
+            <br>
           </p>
+
+          <div class="container" data-aos="fade-up">
+            <div class="section-title">
+              <h3>How big is the graph?</h3>
+              <p>We present here a summary of the available data for the Wikispeedia graph and paths that we performed
+                our analysis.</p>
+            </div>
+
+            <div class="row">
+
+              <div class="col-lg-4 col-md-6">
+                <div class="count-box">
+                  <i class='bx bxl-wikipedia'></i>
+                  <span data-purecounter-start="0" data-purecounter-end="4604" data-purecounter-duration="1"
+                    class="purecounter">4604</span>
+                  <p>Wikipedia Articles</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
+                <div class="count-box">
+                  <i class='bx bxs-user-check'></i>
+                  <span data-purecounter-start="0" data-purecounter-end="51318" data-purecounter-duration="1"
+                    class="purecounter">51318</span>
+                  <p>Finished paths</p>
+                </div>
+              </div>
+
+              <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                <div class="count-box">
+                  <i class='bx bxs-user-x'></i>
+                  <span data-purecounter-start="0" data-purecounter-end="24875" data-purecounter-duration="1"
+                    class="purecounter">24875</span>
+                  <p>Unfinished paths</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <br>
+          <br>
+
+          <div class="section-title" style="margin-top: 2em;">
+            <h3>How do the finished paths look like?</h3>
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="10">
+              <div class="swiper-wrapper">
+  
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      Africa > Coffee > Cancer > Human > Sleep (4 links, 105 seconds)
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+    
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      Pythagoras > Science > Pollution > Carbon_dioxide > Greenhouse_effect (4 links, 53 seconds)
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->
+    
+                <div class="swiper-slide">
+                  <div class="testimonial-item">
+                    <p>
+                      Monty_Python > Democracy > Monarchy > Kuwait > Iraq > Saudi_Arabia > Afghanistan > Osama_bin_Laden (7
+                      links, 248 seconds)
+                    </p>
+                  </div>
+                </div><!-- End testimonial item -->    
+  
+              </div><!-- End testimonial item -->
+  
+  
+            </div>
+          </div>
+          
         </div>
+
+        
 
     </section><!-- End Data Presentation Section -->
-
-    <!-- ======= Data in Number Section ======= -->
-    <section id="data_number" class="facts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>The data in numbers</h2>
-          <p>Here is a representation of available data in number. </p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4 col-md-6">
-            <div class="count-box">
-              <i class='bx bxl-wikipedia'></i>
-              <span data-purecounter-start="0" data-purecounter-end="4604" data-purecounter-duration="1"
-                class="purecounter">4604</span>
-              <p>Number of Wikipedia articles in WikiSpeedia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0">
-            <div class="count-box">
-              <i class='bx bxs-user-check'></i>
-              <span data-purecounter-start="0" data-purecounter-end="51318" data-purecounter-duration="1"
-                class="purecounter">51318</span>
-              <p>Number of finished paths</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
-            <div class="count-box">
-              <i class='bx bxs-user-x'></i>
-              <span data-purecounter-start="0" data-purecounter-end="24875" data-purecounter-duration="1"
-                class="purecounter">24875</span>
-              <p>Number of unfinished paths</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Data in Number Section -->
-
-    <!-- ======= Wikispeedia Path Example Section ======= -->
-    <section id="testimonials" class="testimonials section-bg smallerWidthDisplay">
-      <div class="container" data-aos="fade-up">
-
-        <div class="subTitle subTitleOfSection">
-          <h2>Some example of WikiSpeedia games finished paths, with the number of links and the time required</h2>
-        </div>
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  Africa > Coffee > Cancer > Human > Sleep (4 links, 105 seconds)
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  Pythagoras > Science > Pollution > Carbon_dioxide > Greenhouse_effect (4 links, 53 seconds)
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <p>
-                  Monty_Python > Democracy > Monarchy > Kuwait > Iraq > Saudi_Arabia > Afghanistan > Osama_bin_Laden (7
-                  links, 248 seconds)
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Quotes Example Section -->
 
     <!-- ======= Game Analysis Section Section ======= -->
     <section id="game-analysis" class="about smallerWidthDisplay">
@@ -318,27 +360,36 @@
           <h2>Game analysis</h2>
           <p style="text-align: left;">
             A user facing a Wikispeedia game challenge is unlikely to reach the final goal if he randomly click links
-            that they might seem
-            reasonable to follow.
-            In practise, users follow a specific strategy: In the early phase of the game, they try to reach pages with
-            high number of links, about a
-            general topic. This pages, called hubs, are crucial as the enormous amount of links they contain can lead
-            the users closer to their target.
-            After reaching those hubs, the users begin to "narrow-down" their search, in order to find the final goal
-            article.
-          </p>
+            that appear in the page. To actually win the game, users need to follow a specific strategy.
+          </p>            
+          <br>
+          <h3>But, Wikispeedia needs a strategy?</h3>
+          <p style="text-align: left;">
+            Well, yes! In order for to win, there is a specific tactict which users seem to use. During the early phases of the 
+            game (first few clicks), users tend to follow links that might lead them to general Wikipedia pages, called hubs. 
+            The hubs are pages with many incoming and outgoing links, which enable the user to follow paths in a more broad direction. 
+            Such pages are pages of general historic events, such as wars, pages of countries etc. <br> Reaching such a page allows the player to start
+            the next phase of the game, which is called "narrowing-down" phase. During this part of the game, and after the encounter of a hub, the users tend to 
+            follow links to more specific pages, that might seem related to their target article. This is a well known strategic approach of the game, which is 
+            also discussed in the official paper. 
+          </p>     
         </div>
 
-       
+
+
         <div class="section-title" style="margin-top: 2em;">
+          <h3>Lets see the graphs!</h3>
+          <p style="text-align: left;">
+            Here, we begin presenting our analysis over the game!
+          </p>   
           <!--<div class="col-lg-6">-->
           <div style="width: 50%; margin-left: auto; margin-right: auto">
-            <img src="assets/plots/links_in_per_click.png"  class="img-fluid img_display" alt="">
-          </div> 
+            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
+          </div>
           <p style="text-align: left;">
-            The graph above presents the links of the page that the users visits in every step of the game. 
+            The graph above presents the links of the page that the users visits in every step of the game.
             It is understood that in the early phases of the game users visit the hubs, while in later clicks
-            the search in narrowed down to more specific pages. 
+            the search in narrowed down to more specific pages.
           </p>
         </div>
 
@@ -352,14 +403,17 @@
             </div>
           </div>
           <p style="text-align: left;">
-            Those graph present the categories of the visited pages after the some clicks of the game. 
-            The left graph shows the distribution of the selected categories in the first click of the game, while the graph on the right
+            Those graph present the categories of the visited pages after the some clicks of the game.
+            The left graph shows the distribution of the selected categories in the first click of the game, while the
+            graph on the right
             shows the distribution after the sixth click.
             We see that in the first click, <b>more than 17% of the clicks went to a country page!</b> <br>
-            In later phases of the game, for example in the sixth click, we see that the category percentages are normalized, and
-            the categories differ according to the type of the target article. The graph on the right indicates a phase of the game where the narrowing
+            In later phases of the game, for example in the sixth click, we see that the category percentages are
+            normalized, and
+            the categories differ according to the type of the target article. The graph on the right indicates a phase
+            of the game where the narrowing
             down has started, and the users approaches more specific pages.
-            
+
           </p>
         </div>
 
@@ -367,7 +421,7 @@
           <h3>Okay, but <b>where</b> are those links?</h3>
           <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="10">
             <div class="swiper-wrapper">
-  
+
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -375,7 +429,7 @@
                   </p>
                 </div>
               </div><!-- End testimonial item -->
-  
+
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -383,7 +437,7 @@
                   </p>
                 </div>
               </div><!-- End testimonial item -->
-  
+
               <div class="swiper-slide">
                 <div class="testimonial-item">
                   <p>
@@ -399,14 +453,14 @@
                   </p>
                 </div>
               </div>
-  
-              </div><!-- End testimonial item -->
-  
-            
+
+            </div><!-- End testimonial item -->
+
+
           </div>
         </div>
 
-        
+
     </section> <!-- End Game Analysis Section -->
 
     <section id="visual-link-analysis" class="about smallerWidthDisplay">
@@ -415,19 +469,23 @@
         <div class="section-title">
           <h2>Visual Link Position Analysis</h2>
           <p style="text-align: left;">
-            A wikipedia page has a specific structure, because it is divided in three important sections, lead, body and infobox. 
-            
+            A wikipedia page has a specific structure, because it is divided in three important sections, lead, body and
+            infobox.
+
             Every one of those sections may contain links that a user could follow.
-            Normally, lead in on the top of the page, containing a descriptive paragraph about the 
+            Normally, lead in on the top of the page, containing a descriptive paragraph about the
             current page with the corresponding links. Then, the body follows, containing multiple paragraphs and links.
-            The body of the page contains all the information available for this page. Finally, the infobox is a small frame at the right of the 
-            page, showing conclusive information about the article. Infoboxes sometimes contain links, but there are several cases where they only contain 
+            The body of the page contains all the information available for this page. Finally, the infobox is a small
+            frame at the right of the
+            page, showing conclusive information about the article. Infoboxes sometimes contain links, but there are
+            several cases where they only contain
             text.
-            In our data, approximately 1% of the links belong to the infobox section, thus we decided not to include them in our analysis. 
+            In our data, approximately 1% of the links belong to the infobox section, thus we decided not to include
+            them in our analysis.
           </p>
           <div style="width: 90%; margin-left: auto; margin-right: auto">
             <a href="https://en.wikipedia.org/wiki/Souvlaki" target="_blank">
-              <img src="assets/img/layout.png" class="img-fluid" alt="" >
+              <img src="assets/img/layout.png" class="img-fluid" alt="">
             </a>
           </div>
           <p style="text-align: left;">
@@ -438,21 +496,23 @@
         <div class="section-title" style="margin-top: 2em;">
           <div style="width: 50%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/lead_body_click_loc.png" class="img-fluid img_display" alt="">
-          </div>  
+          </div>
           <p style="text-align: left;">
-            In the graph above we present how many links are located in the lead and in the body, and how many of them are clicked. We see 
-            that the users generally prefer the links in the lead. 
+            In the graph above we present how many links are located in the lead and in the body, and how many of them
+            are clicked. We see
+            that the users generally prefer the links in the lead.
           </p>
         </div>
 
-        
+
 
         <div class="section-title" style="margin-top: 2em;">
           <div style="width: 50%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/par_scatter.png" class="img-fluid img_display" alt="">
-          </div>  
+          </div>
           <p style="text-align: left;">
-            The above scatter presents the ditribution of links among the paragraphs. We see that most of the links belong to the starting paragraphs 
+            The above scatter presents the ditribution of links among the paragraphs. We see that most of the links
+            belong to the starting paragraphs
           </p>
         </div>
 
@@ -480,7 +540,7 @@
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <div class="row" >
+          <div class="row">
             <div class="col-lg-6">
               <img src="assets/plots/par_loc_per_click.png" class="img-fluid img_display" alt="">
             </div>
@@ -490,20 +550,20 @@
           </div>
           <p style="text-align: left;">
             ADD DESCRIPTION
-            
+
           </p>
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
           <div style="width: 80%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/expected_vs_obs_clicks.png" class="img-fluid img_display" alt="">
-          </div>  
+          </div>
           <p style="text-align: left;">
-            ADD DESCRIPTION          
+            ADD DESCRIPTION
           </p>
         </div>
 
-        
+
     </section>
     <!-- End Link Analysis Section -->
 
@@ -513,28 +573,35 @@
         <div class="section-title">
           <h2>How do our results compare with related work?</h2>
           <p style="text-align: left;">
-            The wikipedia graph and the visual link position analysis has been a topic of active research recently. 
-            There has been relevant work about studying the page structure of Wikipedia in order to determine the position of the 
-            links that users are most likely to follow. This work mainly consists of data gathered from users that 
-            "free browse" Wikipedia pages, without the aim of reaching a final target, and the users click on pages that they find interesting 
-            in general. We differ from this because our data come from users that click on pages that might lead them to their goal, 
-            exploiting their common sense about pages that are semantically similar to the final destination. 
+            The wikipedia graph and the visual link position analysis has been a topic of active research recently.
+            There has been relevant work about studying the page structure of Wikipedia in order to determine the
+            position of the
+            links that users are most likely to follow. This work mainly consists of data gathered from users that
+            "free browse" Wikipedia pages, without the aim of reaching a final target, and the users click on pages that
+            they find interesting
+            in general. We differ from this because our data come from users that click on pages that might lead them to
+            their goal,
+            exploiting their common sense about pages that are semantically similar to the final destination.
             This notion of semantic similarity between pages in not captured by previous work
             <br>
-            A general outcome for the visual link position analysis in the field is the observation that 
+            A general outcome for the visual link position analysis in the field is the observation that
             <b>Users tend to click to links that appear at the left part of the page CITE CITE CITE</b>.
             <br>
-            This observation is orthogonal to our findings. With our research, we support that <b>>the users tend to prefer links that
-            appear in the lead section</b>, while we state that <b>in the early parts of the navigation users tend to follow links appearing in the first 
-            paragraphs of the page, while in later phases they tend to search the page more, in more detailed section</b>. 
+            This observation is orthogonal to our findings. With our research, we support that <b>>the users tend to
+              prefer links that
+              appear in the lead section</b>, while we state that <b>in the early parts of the navigation users tend to
+              follow links appearing in the first
+              paragraphs of the page, while in later phases they tend to search the page more, in more detailed
+              section</b>.
             <br>
-            Our results do not take into consideration the absolute position of those links in the page, because we study their position in terms of paragraphs.
+            Our results do not take into consideration the absolute position of those links in the page, because we
+            study their position in terms of paragraphs.
 
           </p>
         </div>
 
       </div>
-    </section> 
+    </section>
 
     <section id="conclusion" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
@@ -543,20 +610,22 @@
           <h2>Conclusion</h2>
           <p style="text-align: left;">
             We used the available user navigation data of Wikispeedia to gain insight about the user behavior
-            when trying to find a target Wikipedia article given an initial one, by following Wikipedia links and 
-            using their common sense. 
+            when trying to find a target Wikipedia article given an initial one, by following Wikipedia links and
+            using their common sense.
             <br>
             Our research results can be summarized in the following:
-            <ul>
-              <li><b>During their whole navigation, users tend to click links that appear in the lead section of the page instead of the body</b></li>
-              <li><b>in the early parts of the navigation users tend to follow links appearing in the first 
-                paragraphs of the page, while in later phases they tend to search the page more, in more detailed section</b></li>
-            </ul>
+          <ul>
+            <li><b>During their whole navigation, users tend to click links that appear in the lead section of the page
+                instead of the body</b></li>
+            <li><b>in the early parts of the navigation users tend to follow links appearing in the first
+                paragraphs of the page, while in later phases they tend to search the page more, in more detailed
+                section</b></li>
+          </ul>
           </p>
         </div>
 
       </div>
-    </section> 
+    </section>
 
 
   </main>
@@ -567,17 +636,20 @@
     <div class="container">
       <h3>Wikipedia visual link position and user navigation</h3>
       <p>Understanding user behavior by exploiting the visual position of links in Wikipedia pages<br>
-      H. Allegre, I. Bantzis, M. Chatzakis, B. Tornare</p>
-      
+        H. Allegre, I. Bantzis, M. Chatzakis, B. Tornare</p>
+
       <div>
-        <a href="https://dlab.epfl.ch/teaching/fall2022/cs401/" target="_blank"><img src="assets/img/dlab.svg" class="img-fluid" alt="" style="width: 6%; margin-top: -2em;"></a>
-        <a href="https://github.com/epfl-ada/ada-2022-project-souvladaki" target="_blank"><img src="assets/img/github.png" class="img-fluid" alt="" style="width: 5%; margin-top: -2em;"></a>
-        <a href="https://www.epfl.ch/en/" target="_blank"><img src="assets/img/epfl-logo.svg" class="img-fluid" alt="" style="width: 8%; margin-top: -2em;"></a>
+        <a href="https://dlab.epfl.ch/teaching/fall2022/cs401/" target="_blank"><img src="assets/img/dlab.svg"
+            class="img-fluid" alt="" style="width: 6%; margin-top: -2em;"></a>
+        <a href="https://github.com/epfl-ada/ada-2022-project-souvladaki" target="_blank"><img
+            src="assets/img/github.png" class="img-fluid" alt="" style="width: 5%; margin-top: -2em;"></a>
+        <a href="https://www.epfl.ch/en/" target="_blank"><img src="assets/img/epfl-logo.svg" class="img-fluid" alt=""
+            style="width: 8%; margin-top: -2em;"></a>
 
       </div>
 
-    
-      
+
+
       <div class="credits" style="margin: 1em;">
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>

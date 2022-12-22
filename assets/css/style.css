@@ -245,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/Wikipedia-Logo.wine.svg") top right no-repeat;
   background-size: cover;
   position: relative;
-  top: -250px;
+  top: -240px;
 }
 @media (min-width: 992px) {
   #hero {
