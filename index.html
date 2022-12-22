@@ -363,7 +363,7 @@
             that appear in the page. To actually win the game, users need to follow a specific strategy.
           </p>            
           <br>
-          <h3>But, Wikispeedia needs a strategy?</h3>
+          <h3>Wait, Wikispeedia needs a strategy?</h3>
           <p style="text-align: left;">
             Well, yes! In order for to win, there is a specific tactict which users seem to use. During the early phases of the 
             game (first few clicks), users tend to follow links that might lead them to general Wikipedia pages, called hubs. 
@@ -378,48 +378,60 @@
 
 
         <div class="section-title" style="margin-top: 2em;">
-          <h3>Lets see the graphs!</h3>
-          <p style="text-align: left;">
-            Here, we begin presenting our analysis over the game!
-          </p>   
+          <h3>Enough text, lets see graphs!</h3>
+          
           <!--<div class="col-lg-6">-->
-          <div style="width: 50%; margin-left: auto; margin-right: auto">
-            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
+          <div style="width: 70%; margin-left: auto; margin-right: auto">
+            <img src="assets/plots/links_in_per_click.svg" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
-            The graph above presents the links of the page that the users visits in every step of the game.
-            It is understood that in the early phases of the game users visit the hubs, while in later clicks
-            the search in narrowed down to more specific pages.
+            The graph above presents the average links of the page that the users visit in every step (click) of the game.
+            Clearly, we see that in the very early phases of the game, users visit pages with many links, the so called hubs. 
+            After a hub is reached, we can see the "narrowing-down" strategy, by noticing that the players visit more specific pages, with less
+            links at every new click. <br><b>This is an actual representation of the two phases of the game: Reaching a hub and narrowing down after the hub.</b>
           </p>
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
           <div class="row">
-            <div class="col-lg-6" style="width: 50%;">
-              <img src="assets/plots/cat_click1.png" class="img-fluid img_display" alt="">
+            <div class="col-lg-6" >
+              <img src="assets/plots/cat_click1.svg" class="img-fluid img_display" alt="">
             </div>
-            <div class="col-lg-6" style="width: 50%;">
-              <img src="assets/plots/cat_click6.png" class="img-fluid img_display" alt="">
+            <div class="col-lg-6">
+              <img src="assets/plots/cat_click2.svg" class="img-fluid img_display" alt="">
             </div>
           </div>
           <p style="text-align: left;">
-            Those graph present the categories of the visited pages after the some clicks of the game.
-            The left graph shows the distribution of the selected categories in the first click of the game, while the
-            graph on the right
-            shows the distribution after the sixth click.
-            We see that in the first click, <b>more than 17% of the clicks went to a country page!</b> <br>
-            In later phases of the game, for example in the sixth click, we see that the category percentages are
-            normalized, and
-            the categories differ according to the type of the target article. The graph on the right indicates a phase
-            of the game where the narrowing
-            down has started, and the users approaches more specific pages.
+            Those graphs present the percentange of the top categories of articles that players follow
+            during the initial, "hub-searching" phase of the game. The right graph corresponds to the very
+            beginning of the game, after the first click of the player, while the second corresponds to the
+            second click of the player. <br>
+            We see that in both cases <b>more than 15% of the clicks go to a country page!</b><br>
+            This is expected! In Wikipedia, pages that represent countries include a great amount of content
+            and have numerous outgoing links to many different other pages. Thus, it is normal for a player
+            to start by searching a country page, which corresponds to a high quality hub. 
+          </p>
+          <br>
+          <div class="row">
+            <div class="col-lg-6" >
+              <img src="assets/plots/cat_click7.svg" class="img-fluid img_display" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/plots/cat_click8.svg" class="img-fluid img_display" alt="">
+            </div>
+          </div>
 
+          <p style="text-align: left;">
+            The rest of the graphs present the percentance of the top categories of articles visited during the
+            "narrowing-down" phase of the game, in steps 7 and 8 respectively. <br>Here, <b>we have a more balanced selection of the categories and no category exceeds the percentange of 5%!</b> <br>
+            This is also expected! During this phase, players tend to find more specific articles (and thus, categories). The articles 
+            that they select are related to their final goal, resulting in the presented graphs.
           </p>
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <h3>Okay, but <b>where</b> are those links?</h3>
-          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="10">
+          <h3>Good, but <b>where</b> are those links?</h3>
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="3">
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
@@ -454,6 +466,22 @@
                 </div>
               </div>
 
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    Maybe.. <b>NOWHERE</b>?
+                  </p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <p>
+                    Who knows?
+                  </p>
+                </div>
+              </div>
+
             </div><!-- End testimonial item -->
 
 
@@ -469,19 +497,21 @@
         <div class="section-title">
           <h2>Visual Link Position Analysis</h2>
           <p style="text-align: left;">
-            A wikipedia page has a specific structure, because it is divided in three important sections, lead, body and
-            infobox.
-
-            Every one of those sections may contain links that a user could follow.
-            Normally, lead in on the top of the page, containing a descriptive paragraph about the
-            current page with the corresponding links. Then, the body follows, containing multiple paragraphs and links.
-            The body of the page contains all the information available for this page. Finally, the infobox is a small
-            frame at the right of the
-            page, showing conclusive information about the article. Infoboxes sometimes contain links, but there are
-            several cases where they only contain
+            Before finding the positions of the links, it is important 
+            to keep in mind the structure of a typical Wikipeida page,
+            A wikipedia page has a specific structure, because it is divided in three major sections, <b>the lead, the body and
+            the infobox</b> which contain links that a user could follow.
+            <br>
+            The lead in on the top of the page, containing a descriptive paragraph about the
+            current page with the corresponding links. 
+            Then, the body follows, containing multiple paragraphs and links, which are the main content of the article.
+            Finally, the infobox is a small frame at the right of the
+            page, showing conclusive information about the page.
+            Infoboxes sometimes contain links, but there are several cases where they only contain
             text.
-            In our data, approximately 1% of the links belong to the infobox section, thus we decided not to include
-            them in our analysis.
+            <br>
+            In Wikispeedia data, <b>approximately 1% of the links belong to the infobox</b>, thus we decided not to include
+            them in our analysis for simplicity.
           </p>
           <div style="width: 90%; margin-left: auto; margin-right: auto">
             <a href="https://en.wikipedia.org/wiki/Souvlaki" target="_blank">
@@ -489,13 +519,21 @@
             </a>
           </div>
           <p style="text-align: left;">
-            ADD DESC
+            This in an example of a typical structure for one of the most amazing Wikipedia pages. We see that the page begins with the lead,
+            on the right there is the infobox and then, there is the body of the page with the actual content.  
           </p>
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <div style="width: 50%; margin-left: auto; margin-right: auto">
-            <img src="assets/plots/lead_body_click_loc.png" class="img-fluid img_display" alt="">
+          <h3>Lets get to the point!</h3>
+          <p style="text-align: left;">
+            Now that we are aware of the basic statistics and analysis of the game, as well as the structure of the pages, we can proceed with our 
+            visual link position analysis work!
+          </p>
+          <br>
+
+          <div style="width: 70%; margin-left: auto; margin-right: auto">
+            <img src="assets/plots/clicks_vs_links.svg" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
             In the graph above we present how many links are located in the lead and in the body, and how many of them
@@ -507,23 +545,14 @@
 
 
         <div class="section-title" style="margin-top: 2em;">
-          <div style="width: 50%; margin-left: auto; margin-right: auto">
-            <img src="assets/plots/par_scatter.png" class="img-fluid img_display" alt="">
+          <div style="width: 70%; margin-left: auto; margin-right: auto">
+            <img src="assets/plots/scat_par.svg" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
             The above scatter presents the ditribution of links among the paragraphs. We see that most of the links
             belong to the starting paragraphs
           </p>
         </div>
-
-        <!--<div class="section-title" style="margin-top: 2em;">
-          <div class="col-lg-6">
-            <iframe src="https://github.com/epfl-ada/ada-2022-project-souvladaki/blob/987c1fe43bf95cb892b883e089296b12fdb0256a/plots/expected_vs_observed.html" style="border:none;" title="Iframe Example"></iframe> 
-          </div>  
-          <p style="text-align: left;">
-            The above scatter presents the ditribution of links among the paragraphs. We see that most of the links belong to the starting paragraphs 
-          </p>
-        </div>-->
 
         <div class="section-title" style="margin-top: 2em;">
           <div class="row">
