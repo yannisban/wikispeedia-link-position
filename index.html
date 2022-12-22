@@ -32,7 +32,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script src="https://unpkg.com/3d-force-graph@1.70.17/dist/3d-force-graph.min.js"></script>
-  <!--<script type="text/javascript" src="graph/graph-vis.js"></script>-->
+  <script type="text/javascript" src="graph/graph.js"></script>
 
   <!-- =======================================================
   * Template Name: MyResume - v4.7.0
@@ -162,41 +162,12 @@
     <section id="graph" class="about smallerWidthDisplay">
       <div class="container" id="graph-vis-id">
         <script>
-          /*const elem = document.getElementById("graph-vis-id");
-          const Graph = ForceGraph3D()
-            (elem)
-            .graphData({ "nodes": [{ "name": "Myriel", "group": 1, "id": 1 }, { "name": "Napoleon", "group": 1, "id": 2 }], links: [{ "source": 1, "target": 2, "value": 1 }] })
-            .nodeLabel('name')
-            .nodeAutoColorBy('group')
-            .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
-            .onNodeClick(node => {
-              // Aim at node from outside it
-              const distance = 40;
-              const distRatio = 1 + distance / Math.hypot(node.x, node.y, node.z);
-
-              Graph.cameraPosition(
-                { x: node.x * distRatio, y: node.y * distRatio, z: node.z * distRatio }, // new position
-                node, // lookAt ({ x, y, z })
-                3000  // ms transition duration
-              );
-            }); */
-            //var request = new XMLHttpRequest();
-            //request.open("GET", "graph/graph.json", false);
-            //request.send(null)
-            //var my_JSON_object = JSON.parse(request.responseText);
-            //header("Access-Control-Allow-Origin: *");
-            //$.getJSON("./graph/graph.json", function(json) {
-            //  console.log(json); // this will show the info it in firebug console
-            //});
-          const myGraph = ForceGraph3D();
-          myGraph(document.getElementById("graph-vis-id")).jsonUrl("http://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
-          //fetch("https://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
-          //.then((data) => myGraph(document.getElementById("graph-vis-id")).graphData(data));
-          //myGraph(document.getElementById("graph-vis-id")).graphData(my_JSON_object)
-          //var cors = new EnableCorsAttribute("*", "*", "*");
-          //config.EnableCors(cors);
-
-
+          
+          
+            //const myGraph = ForceGraph3D();
+            //myGraph(document.getElementById("graph-vis-id")).graphData(GRAPH_JSON)//.jsonUrl("http://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
+          
+            //console.log(GRAPH_JSON)
         </script>
       </div>
     </section>
@@ -310,6 +281,7 @@
     </section><!-- End Quotes Example Section -->
 
     <!-- ======= Most Mentioned Section Section ======= -->
+    <!--
     <section id="nlp" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -356,9 +328,10 @@
         </div>
 
       </div>
-    </section><!-- End Most Mentioned Section -->
+    </section> End Most Mentioned Section -->
 
     <!-- ======= Sentiment Analysis Section ======= -->
+    <!--
     <section id="sentimentAnalysis" class="about smallerWidthDisplay">
       <div class="container testimonials" data-aos="fade-up">
 
@@ -486,9 +459,9 @@
         </div>
 
       </div>
-    </section><!-- End Sentiment Analysis Section -->
+    </section>< End Sentiment Analysis Section -->
 
-    <!-- ======= Observational study Section ======= -->
+    <!-- ======= Observational study Section ======= 
     <section id="observationalStudy" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -759,9 +732,9 @@
         </div>
 
       </div>
-    </section><!-- End Observational study Section -->
+    </section> End Observational study Section -->
 
-    <!-- ======= Impact regression Section ======= -->
+    <!-- ======= Impact regression Section ======= 
     <section id="impactRegression" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -816,7 +789,7 @@
 
         </div>
       </div>
-    </section><!-- End Impact regression Section -->
+    </section> End Impact regression Section -->
 
     <!-- ======= Impact regression Section ======= -->
     <section id="conclusion" class="about smallerWidthDisplay">
@@ -844,9 +817,9 @@
         </div>
 
       </div>
-    </section><!-- End Impact regression Section -->
+    </section> <!--End Impact regression Section -->
 
-    <!-- ======= Impact regression Section ======= -->
+    <!-- ======= Impact regression Section ======= 
     <section id="futureWork" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -892,9 +865,9 @@
         </div>
 
       </div>
-    </section><!-- End Impact regression Section -->
+    </section>End Impact regression Section -->
 
-    <!-- ======= Usefull Links Section ======= -->
+    <!-- ======= Usefull Links Section ======= 
     <section id="links" class="services smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -940,17 +913,17 @@
         </div>
 
       </div>
-    </section><!-- End Usefull Links -->
+    </section>End Usefull Links -->
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>The Elon Effect</h3>
-      <p>Adham Khaled Elwakil, Ferdinand Schumacher Ytteborg, Fredrik Aale Hægermark, Selima Jaoua</p>
-      <p style="font-style: normal; font-size: 25px; margin-top: -1em;"><b>mADAgascar</b></p>
-      <img src="assets/img/meme.png" class="img-fluid" alt="" style="width: 30%; margin-top: -2em;">
+      <h3>Wikispeedia Visual Link Position Analysis</h3>
+      <p>H. Allegre, I. Bantzis, M. Chatzakis, B. Tornare</p>
+      <!--<p style="font-style: normal; font-size: 25px; margin-top: -1em;"><b>mADAgascar</b></p>
+      <img src="assets/img/meme.png" class="img-fluid" alt="" style="width: 30%; margin-top: -2em;">-->
       <div class="credits" style="margin: 1em;">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you purchased the pro version. -->
