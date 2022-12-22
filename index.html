@@ -626,33 +626,37 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>How do our results compare with related work?</h2>
-          <p style="text-align: left;">
-            The wikipedia graph and the visual link position analysis has been a topic of active research recently.
-            There has been relevant work about studying the page structure of Wikipedia in order to determine the
-            position of the
-            links that users are most likely to follow. This work mainly consists of data gathered from users that
-            "free browse" Wikipedia pages, without the aim of reaching a final target, and the users click on pages that
-            they find interesting
-            in general. We differ from this because our data come from users that click on pages that might lead them to
-            their goal,
-            exploiting their common sense about pages that are semantically similar to the final destination.
-            This notion of semantic similarity between pages in not captured by previous work
-            <br>
-            A general outcome for the visual link position analysis in the field is the observation that
-            <b>Users tend to click to links that appear at the left part of the page CITE CITE CITE</b>.
-            <br>
-            This observation is orthogonal to our findings. With our research, we support that <b>>the users tend to
-              prefer links that
-              appear in the lead section</b>, while we state that <b>in the early parts of the navigation users tend to
-              follow links appearing in the first
-              paragraphs of the page, while in later phases they tend to search the page more, in more detailed
-              section</b>.
-            <br>
-            Our results do not take into consideration the absolute position of those links in the page, because we
-            study their position in terms of paragraphs.
+          <h2>Related Work</h2>
 
+          <h3>Is there related work?</h3>
+
+          <p style="text-align: left;">
+            As we mentioned in the introduction, the field of studying the user nagivigation and locating semantically similar entities 
+            based on the user behavior by exploiting their common sense is evolving and there are many works around this general topic. <br><br>
+
+            There have been studies from user navigation in Wikipedia articles, but those evaluations are different, as they are captured 
+            from users that perform a "freestyle-browsing" in Wikipedia, clicking the links that they find interesting. Such works, although they
+            provide useful results they are not comparable with Wikispeedia navigation, because Wikispeedia encapsulates the common sense and 
+            semantic similarity from the user thought during the navigation. 
+            <br><br>
+            The most applicable related work with our research is described <a href="https://dl.acm.org/doi/10.1145/2872518.2889388">here</a>. In a nutshell, 
+            scientists tried to find in which position of the page the most clicked links belong. By creating a heatmap of the positions of 
+            the links in the pages, scientists understood that users have a tendency to prefer to click on the left side of the screen. This means that this 
+            work is mostly oriented in finding the absolute positions of the links in a page (left, right, bottom, top).
           </p>
+          
+          <br>
+
+          <h3>Interaction with our work</h3>
+          <p style="text-align: left;">
+            Our research in this project is orthogonal to what we described above. Rather than studying the absolute positions of links in the screen,
+            we study in which relative parts of the page the most popular links aside. Instead of having terms such as left-side, right-side etc.
+            we analyze their position based on if they appear on the lead or the body, which sections are the most clicked, how the links in different sections
+            have different attributes etc.
+            <br><br>
+            The combination of these two works as a future direction would be really interesting.
+          </p>
+
         </div>
 
       </div>
@@ -680,7 +684,7 @@
               but:<br>
               - In Wikispeedia games, <b>the percentage of the clicks in the body section increases slightly in the latter
               stages of the game, implying that players are looking further down the document for more informative
-              links</b><br>
+              links</b>
             
 
             <br>
