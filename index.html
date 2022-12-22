@@ -498,9 +498,10 @@
         <div class="section-title">
           <h2>Visual Link Position Analysis</h2>
           <p style="text-align: left;">
+            Before finding the positions of the links, it is important 
+            to keep in mind the structure of a typical Wikipeida page,
             A wikipedia page has a specific structure, because it is divided in three major sections, <b>the lead, the body and
-            the infobox</b>.
-            Every one of those sections may contain links that a user could follow.
+            the infobox</b> which contain links that a user could follow.
             <br>
             The lead in on the top of the page, containing a descriptive paragraph about the
             current page with the corresponding links. 
@@ -510,7 +511,7 @@
             Infoboxes sometimes contain links, but there are several cases where they only contain
             text.
             <br>
-            In Wikispeedia data, <b>approximately 1%< of the links belong to the infobox</b>, thus we decided not to include
+            In Wikispeedia data, <b>approximately 1% of the links belong to the infobox</b>, thus we decided not to include
             them in our analysis for simplicity.
           </p>
           <div style="width: 90%; margin-left: auto; margin-right: auto">
@@ -519,12 +520,16 @@
             </a>
           </div>
           <p style="text-align: left;">
-            ADD DESC
+            This in an example of a typical structure for one of the most amazing Wikipedia pages. We see that the page begins with the lead,
+            on the right there is the infobox and then, there is the body of the page with the actual content.  
           </p>
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <div style="width: 50%; margin-left: auto; margin-right: auto">
+          <h3>Lets get to the point!</h3>
+          <br>
+
+          <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/lead_body_click_loc.png" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
@@ -537,8 +542,8 @@
 
 
         <div class="section-title" style="margin-top: 2em;">
-          <div style="width: 50%; margin-left: auto; margin-right: auto">
-            <img src="assets/plots/par_scatter.png" class="img-fluid img_display" alt="">
+          <div style="width: 70%; margin-left: auto; margin-right: auto">
+            <img src="assets/plots/scat_par.svg" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
             The above scatter presents the ditribution of links among the paragraphs. We see that most of the links
