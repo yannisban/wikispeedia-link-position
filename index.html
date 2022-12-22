@@ -378,13 +378,13 @@
         <div class="section-title">
           <h2>Game analysis</h2>
           <p style="text-align: left;">
-            A user facing a Wikispeedia game challenge is unlikely to reach the final goal if he randomly click links
+            A user facing a Wikispeedia game challenge is unlikely to reach the final goal if he randomly clicks links
             that appear in the page. To actually win the game, users need to follow a specific strategy.
           </p>
           <br>
           <h3>Wait, Wikispeedia needs a strategy?</h3>
           <p style="text-align: left;">
-            Well, yes! In order for to win, there is a specific tactict which users seem to use. During the early phases
+            Well, yes! In order to win, there is a specific tactic which users seem to use. During the early phases
             of the
             game (first few clicks), users tend to follow links that might lead them to general Wikipedia pages, called
             hubs.
@@ -575,7 +575,7 @@
             article. This means that the x-axis
             represents the position of the paragraph in the page.We conclude that <b>the most links are usually present
               in the first few paragraphs of
-              each page</b> although the rest of the paragraphs which appear later in the pages still can have some
+              each page</b> although the rest of the paragraphs which appear later in the pages can still have some
             links.
           </p>
 
@@ -588,28 +588,43 @@
             the dataset,
             while the left graph presents the number of clicks performed among all the games in the corresponding
             sections of lead and body.
-            From this graph, we conclude that the ...... ADD STUFF HERE
+            From this graph, we conclude that although clicks in the lead section represent only about <b> 20%</b> of the 
+            total links in the corpus, users click at them about <b>40%</b> of the time when playing the game! This implies that
+            links in the lead section contain more relevant articles that lead users to their final goal. 
           </p>
 
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/expected_vs_observed.svg" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
-            ADD DESCRIPTION
+            <b>What if the links were chosen at random? </b> We repeat every path in our dataset and for every click we calculate an expected click location
+            based on all of the links in that particular page. The location is simply the paragraph that contains the link. 
+            We then compare these expected locations of clicks with those of the actual clicks that players made in the 
+            game. The results are clear: There is a strong preference towards the first paragraphs.
+             
           </p>
 
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/body_vs_lead_per_click.svg" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
-            ADD DESCRIPTION
+            We have plenty of evidence so far that the <b>links located in the first paragraphs are the most chosen ones</b>.
+            Do they also contain <b>more links?</b> <b>Yes!</b>
+            By analyzing all the chosen articles in the paths we can see that articles clicked at the Lead introductory section contain on average
+            more links than the ones in the body. This difference continues to exist <b>even as the game progresses!</b>.
+            This behavior is to be expected. To quote Wikipedia Manual of Style: "The lead serves as an introduction to the article and a summary 
+            of its most important contents." Even as we approach more specialized, shorter articles, the introductory section contains the most important points of
+            the article and naturally leads to more general "hub" articles.
           </p>
 
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/section_clicks.svg" class="img-fluid img_display" alt="">
           </div>
           <p style="text-align: left;">
-            ADD DESCRIPTION
+            The percentages of sections clicked at each stage of the game remain almost equal throughout.
+            On the first click, we notice a slight preference for articles in the lead section. This represents the strategy of the
+            users to get away from the unrelated source articles towards the more general articles that will give them access to a higher
+            amount of links and relevant results.
           </p>
 
           <div class="row">
@@ -621,7 +636,13 @@
             </div>
           </div>
           <p style="text-align: left;">
-            ADD DESCRIPTION
+            As we note from the plot on the left, the <b>first click</b> is located higher in the article on average. This occurs because the first introductory paragraphs
+            lead to articles of higher importance and generality as seen in the plots before.
+            On the <b>second click</b> the paragraph number increases drastically. This happens because the general "high importance" articles contain more paragraphs and 
+            players are searching through whole text for more relevant specialized articles which can be found lower in the page.
+            <b>After the second click</b> the paragraph number decreases gradually which can be attributed to the lower total number of paragraphs these articles contain. However, 
+            players are still looking deep into the text as the right figure shows. The percentage of the body section clicked increases slightly in the latter stages of the game
+            which implies that players are looking further down the document although these highly specialized documents have a lower total amount of text.
           </p>
 
         </div>
