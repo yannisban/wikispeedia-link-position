@@ -52,32 +52,34 @@
 
     <nav id="navbar" class="navbar nav-menu">
       <ul>
-        <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#Hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class='bx bx-comment-detail'></i>
             <span>Introduction</span></a>
         </li>
-        <li><a href="#data_presentation" class="nav-link scrollto"><i class='bx bxs-bar-chart-alt-2'></i> <span>Wikispeedia Data</span></a>
+        <li><a href="#data_presentation" class="nav-link scrollto"><i class='bx bxs-bar-chart-alt-2'></i> <span>Data in
+              numbers</span></a>
         </li>
-        <li><a href="#game-analysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Link Position
-              Analysis</span></a></li><!--
+        <li><a href="#LinkPositionAnalysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Link Position
+              Analysis</span></a></li>
         <li><a href="#observationalStudy" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Observational
               Study</span></a></li>
         <li><a href="#impactRegression" class="nav-link scrollto"><i class="bx bx-line-chart"></i> <span>Impact
               regression</span></a></li>
         <li><a href="#conclusion" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Conclusion</span></a></li>
-        <li><a href="#links" class="nav-link scrollto"><i class="bx bx-link"></i> <span>Links</span></a></li>-->
+        <li><a href="#links" class="nav-link scrollto"><i class="bx bx-link"></i> <span>Links</span></a></li>
       </ul>
       </nav><!-- .nav-menu -->
 
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center">
+  <!-- ======= Presentation Section ======= -->
+  <section id="Hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Wikipedia visual link position and user navigation through Wikispeedia.</h1>
+      
+      <h1>Wikipedia navigation behavior</h1>
       <p>Towards understanding user behavior by exploiting the visual position of links in Wikipedia pages</p>
       <p>How people <span class="typed"
-          data-typed-items="are navigating through Wikipedia?, searching behavior can be described?"></span>
+          data-typed-items="are navigating through Wikipedia?,are navigating through Wikispeedia?, searching behavior can be described? "></span>
       </p>
       <p>
         <small class="ml-3"><b>By:</b></small>
@@ -106,38 +108,18 @@
           <h2>Introduction</h2>
           <p style="text-align: left;">
 
-            <!--Wikipedia is a place you can easily navigate through articles and information.
+            Wikipedia is a place you can easily navigate through articles and information.
             A game has been derivated through this navigation, called <a href="https://dlab.epfl.ch/wikispeedia/play/"
             target="_blank">Wikispeedia</a>. In this game, users are assigned
             the task of reaching a given article from another source article, exclusively by clicking the links that
             they encounter in each article. A crucial aspect of it is that users click on links considering which of
             them are semantically related to their goal, using their common sense. In this work, we study how the
-            visual position of those links in a page affects the decision of the user, and how they impact the outcome of the game.-->
+            visual position of those links in a page affects the decision of the user, and how they impact the outcome of the game.
 
-            Wikipedia is the biggest collection of human information openly available to the public. It is constantly updated with new information
-            from the users, which results in an available online encyclopedia of an enormous size. 
+            <br></br>
 
-            Wikipedia has been very atractive to computer scientists and data analysts, because of the links between the article pages. From a graph perspective
-            the links between articles form a very interesting knowledge graph, which can be a subject of interesting graph analysis research.
-
-            Recently, a research direction emerged in the path of understanding which links between articles are more important i.e. which links connect semantically
-            similar articles. Scientists tried to find these semantically important links, by examining the user navigation among those articles.
-
-            In this sense, a game called <a href="https://dlab.epfl.ch/wikispeedia/play/"target="_blank">Wikispeedia</a> has been developed, which 
-            challenges users to start from a given Wikipedia article and reach another article only by clicking the links that appear in the current page. 
-            This work managed to encapsulate common sense into the network of Wikipedia, and it provided insight about semantically similar entities in the graph,
-            as well as the tactical behavior of users to reach their destination.
-
-            Although there has been a massive amount of research in such networks, a question remains unanswered:
-            <br>
-
-            <b>What is the visual positions of the clicked links? <br>How it their position in the pahe related to the selection of the user?</b><br>
-            
-            <br>
-            <br>
-            <br>
           <div style="display: block; margin: auto; width: 100%; margin-bottom: 2em">
-            <h3 style="text-align: center; margin-bottom: 1em">Wikispeedia: A seemingly simple game</h3>
+            <h3 style="text-align: center; margin-bottom: 1em">A seemingly simple game</h3>
             <div style="width: 90%; margin-left: auto; margin-right: auto">
               <a href="https://dlab.epfl.ch/wikispeedia/play/" target="_blank">
                 <img src="assets/img/intro/WikiSpeedia.png" class="img-fluid" alt="" style="border: 1px solid black">
@@ -146,11 +128,10 @@
             <div style="width: 80%; text-align: left; margin-left: auto; margin-right: auto; margin-top:1em">
               <p>
                 Players browse Wikipedia pages, in which links are highlighted in yellow. Each article has
-                a number of links leading to a new article. The semantic knowledge of the word makes it
-                possible to do hypotheses on the probability to reach the Goal article.
-                <br>
+                a number of links leading to a new article. The semantic knowledge of the concepts makes it
+                possible to make hypotheses on the probability of getting close of the goal article.
                 In this example, the player must find the article "Amazon Basin" starting from the article
-                Constantine I. The path contains 7 links already visited (Constantine I > Great Britain >
+                Constantine I. The path contains 7 links already traveled (Constantine I > Great Britain >
                 Europe > Russia > United States > Gulf of Mexico > Spain > Latin).
               </p>
             </div>
@@ -163,12 +144,13 @@
             <img src="assets/img/intro/path.png" class="img-fluid" alt="">
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0">
-            <div class="questions">
+
+            <div class="questions"; style="text-align: left;">
               <ul>
-                <li>How does the position of links in the page of affects the user behavior?</li>
-                <li>Are there specific sections in which their links are preferred in navigation?</li>
-                <li>Are the results of visual link analysis on Wikispeedia similar with the available literature?</li>
-                <li>How our results on visual link analysis compare to analytics over the graph?</li>
+                <li>How does the position of links in the HTML page of Wikipedia affects the user behavior?</li>
+                <li>Are there specific sections in which their links are preferred by users when navigating the graph?</li>
+                <li>Are the results of visual link analysis on Wikispeedia similar or different with the ones already observed in the literature?</li>
+                <li>How our results on visual link analysis compare to analytics over the graph? Are the links that belong to the most "clicked" sections of the page also important in terms of graph analysis?</li>
               </ul>
             </div>
           </div>
@@ -178,27 +160,25 @@
       </div>
     </section><!-- End Introduction Section -->
 
-   <!-- <section id="graph" class="about smallerWidthDisplay">
-      
-      
+    <section id="graph" class="about smallerWidthDisplay">
       <div class="container" id="graph-vis-id">
         <script>
-          
-          
+
+
             //const myGraph = ForceGraph3D();
             //myGraph(document.getElementById("graph-vis-id")).graphData(GRAPH_JSON)//.jsonUrl("http://github.com/yannisban/wikispeedia-link-position/blob/main/graph/graph.json")
-          
+
             //console.log(GRAPH_JSON)
         </script>
       </div>
-    </section>-->
+    </section>
 
     <!-- ======= Data Presentation Section ======= -->
     <section id="data_presentation" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Wikispeedia Data</h2>
+          <h2>Available WikiSpeedia Data</h2>
           <p style="text-align: left;">
             The data generated by WikiSpeedia games are multiple.
             On the one hand, a list of each article included in the game
@@ -301,16 +281,32 @@
       </div>
     </section><!-- End Quotes Example Section -->
 
+    <!-- ======= Wikispeedia Graph analysis Section ======= -->
+
     <!-- ======= Most Mentioned Section Section ======= -->
-    
-    <section id="game-analysis" class="about smallerWidthDisplay">
+    <!--
+    <section id="nlp" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Game analysis</h2>
-          <p style="text-align: left;">
-            A user facing a Wikispeedia game challenge is unlikely to reach the final goal if he randomly click links that 
-          </p>
+          <h2>THE PUBLIC LISTED COMPANIES MOST MENTIONED BY ELON</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 pt-4 pt-lg-0 content">
+            <p class="normalText" style="font-size: calc(2208px/25);"><b>TESLA</b></p>
+            <p class="normalText" style="font-size: calc(94px/2);"><b>APPLE</b></p>
+            <p class="normalText" style="font-size: calc(64px/2);"><b>TWITTER</b></p>
+            <p class="normalText" style="font-size: calc(62px/2);"><b>FORD</b></p>
+            <p class="normalText" style="font-size: calc(20px/1.5);"><b>PAYPAL</b></p>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/top10plc.svg" class="img-fluid img_display" alt="">
+          </div>
+        </div>
+
+        <div class="subTitle">
+          <h2>Some more data about Elon's quotes</h2>
         </div>
 
         <div class="row">
@@ -321,7 +317,6 @@
             <img src="assets/img/numberOfQuotes_Tesla.svg" class="img-fluid img_display" alt="">
           </div>
         </div>
-
 
         <div class="section-title" style="margin-top: 2em;">
           <p style="text-align: left;">
@@ -336,7 +331,7 @@
         </div>
 
       </div>
-    </section> <!-- End Most Mentioned Section -->
+    </section> End Most Mentioned Section -->
 
     <!-- ======= Sentiment Analysis Section ======= -->
     <!--
@@ -469,7 +464,7 @@
       </div>
     </section>< End Sentiment Analysis Section -->
 
-    <!-- ======= Observational study Section ======= 
+    <!-- ======= Observational study Section =======
     <section id="observationalStudy" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -742,7 +737,7 @@
       </div>
     </section> End Observational study Section -->
 
-    <!-- ======= Impact regression Section ======= 
+    <!-- ======= Impact regression Section =======
     <section id="impactRegression" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -827,7 +822,7 @@
       </div>
     </section> <!--End Impact regression Section -->
 
-    <!-- ======= Impact regression Section ======= 
+    <!-- ======= Impact regression Section =======
     <section id="futureWork" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
@@ -875,7 +870,7 @@
       </div>
     </section>End Impact regression Section -->
 
-    <!-- ======= Usefull Links Section ======= 
+    <!-- ======= Usefull Links Section =======
     <section id="links" class="services smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
 
