@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>WikiSpeedia</title>
+  <title>Wikipedia Link Analysis</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -62,6 +62,7 @@
         <li><a href="#game-analysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Game Analysis
               Analysis</span></a></li>
         <li><a href="#visual-link-analysis" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Visual Link Position Analysis</span></a></li>
+        <li><a href="#related-work" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Related Work</span></a></li>
         <li><a href="#conclusion" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Conclusion</span></a></li>
       </ul>
     </nav><!-- .nav-menu -->
@@ -327,20 +328,12 @@
           </p>
         </div>
 
-        <!--<div class="row">
-          <div class="col-lg-6">
-            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
-          </div>
-          <div class="col-lg-6">
-            <img src="assets/plots/cat_click1.png" class="img-fluid img_display" alt="">
-          </div>
-        </div>-->
-
        
         <div class="section-title" style="margin-top: 2em;">
-          <div class="col-lg-6">
-            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
-          </div>  
+          <!--<div class="col-lg-6">-->
+          <div style="width: 50%; margin-left: auto; margin-right: auto">
+            <img src="assets/plots/links_in_per_click.png"  class="img-fluid img_display" alt="">
+          </div> 
           <p style="text-align: left;">
             The graph above presents the links of the page that the users visits in every step of the game. 
             It is understood that in the early phases of the game users visit the hubs, while in later clicks
@@ -348,25 +341,12 @@
           </p>
         </div>
 
-        <!--<div class="section-title" style="margin-top: 2em;">
-          <div class="col-lg-6">
-            <iframe src="assets/plots/links_in_per_click.html" style="border:none;" title="Iframe Example"></iframe> 
-          </div>  
-          <p style="text-align: left;">
-            The graph above presents the links of the page that the users visits in every step of the game. 
-            It is understood that in the early phases of the game users visit the hubs, while in later clicks
-            the search in narrowed down to more specific pages. 
-          </p>
-        </div>-->
-
-        
-
         <div class="section-title" style="margin-top: 2em;">
           <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="width: 50%;">
               <img src="assets/plots/cat_click1.png" class="img-fluid img_display" alt="">
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6" style="width: 50%;">
               <img src="assets/plots/cat_click6.png" class="img-fluid img_display" alt="">
             </div>
           </div>
@@ -455,7 +435,7 @@
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <div class="col-lg-6">
+          <div style="width: 50%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/lead_body_click_loc.png" class="img-fluid img_display" alt="">
           </div>  
           <p style="text-align: left;">
@@ -467,7 +447,7 @@
         
 
         <div class="section-title" style="margin-top: 2em;">
-          <div class="col-lg-6">
+          <div style="width: 50%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/par_scatter.png" class="img-fluid img_display" alt="">
           </div>  
           <p style="text-align: left;">
@@ -475,14 +455,14 @@
           </p>
         </div>
 
-        <div class="section-title" style="margin-top: 2em;">
+        <!--<div class="section-title" style="margin-top: 2em;">
           <div class="col-lg-6">
             <iframe src="https://github.com/epfl-ada/ada-2022-project-souvladaki/blob/987c1fe43bf95cb892b883e089296b12fdb0256a/plots/expected_vs_observed.html" style="border:none;" title="Iframe Example"></iframe> 
           </div>  
           <p style="text-align: left;">
             The above scatter presents the ditribution of links among the paragraphs. We see that most of the links belong to the starting paragraphs 
           </p>
-        </div>
+        </div>-->
 
         <div class="section-title" style="margin-top: 2em;">
           <div class="row">
@@ -499,7 +479,7 @@
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <div class="row">
+          <div class="row" >
             <div class="col-lg-6">
               <img src="assets/plots/par_loc_per_click.png" class="img-fluid img_display" alt="">
             </div>
@@ -514,7 +494,7 @@
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <div class="col-lg-6">
+          <div style="width: 80%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/expected_vs_obs_clicks.png" class="img-fluid img_display" alt="">
           </div>  
           <p style="text-align: left;">
@@ -526,6 +506,34 @@
     </section>
     <!-- End Link Analysis Section -->
 
+    <section id="related-work" class="about smallerWidthDisplay">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>How do our results compare with related work?</h2>
+          <p style="text-align: left;">
+            The wikipedia graph and the visual link position analysis has been a topic of active research recently. 
+            There has been relevant work about studying the page structure of Wikipedia in order to determine the position of the 
+            links that users are most likely to follow. This work mainly consists of data gathered from users that 
+            "free browse" Wikipedia pages, without the aim of reaching a final target, and the users click on pages that they find interesting 
+            in general. We differ from this because our data come from users that click on pages that might lead them to their goal, 
+            exploiting their common sense about pages that are semantically similar to the final destination. 
+            This notion of semantic similarity between pages in not captured by previous work
+            <br>
+            A general outcome for the visual link position analysis in the field is the observation that 
+            <b>Users tend to click to links that appear at the left part of the page CITE CITE CITE</b>.
+            <br>
+            This observation is orthogonal to our findings. With our research, we support that <b>>the users tend to prefer links that
+            appear in the lead section</b>, while we state that <b>in the early parts of the navigation users tend to follow links appearing in the first 
+            paragraphs of the page, while in later phases they tend to search the page more, in more detailed section</b>. 
+            <br>
+            Our results do not take into consideration the absolute position of those links in the page, because we study their position in terms of paragraphs.
+
+          </p>
+        </div>
+
+      </div>
+    </section> 
 
     <section id="conclusion" class="about smallerWidthDisplay">
       <div class="container" data-aos="fade-up">
@@ -533,8 +541,16 @@
         <div class="section-title">
           <h2>Conclusion</h2>
           <p style="text-align: left;">
-            Wikispeedia provides insight about the user behavior and navigation in Wikipedia pages using their commons sense. 
-            In this work we studies
+            We used the available user navigation data of Wikispeedia to gain insight about the user behavior
+            when trying to find a target Wikipedia article given an initial one, by following Wikipedia links and 
+            using their common sense. 
+            <br>
+            Our research results can be summarized in the following:
+            <ul>
+              <li><b>During their whole navigation, users tend to click links that appear in the lead section of the page instead of the body</b></li>
+              <li><b>in the early parts of the navigation users tend to follow links appearing in the first 
+                paragraphs of the page, while in later phases they tend to search the page more, in more detailed section</b></li>
+            </ul>
           </p>
         </div>
 
