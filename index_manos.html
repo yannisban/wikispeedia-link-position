@@ -61,11 +61,8 @@
         </li>
         <li><a href="#game-analysis" class="nav-link scrollto"><i class='bx bx-link'></i> <span>Game Analysis
               Analysis</span></a></li>
-        <li><a href="#visual-link-analysis" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Visual Link Position Analysis</span></a></li> <!--
-        <li><a href="#impactRegression" class="nav-link scrollto"><i class="bx bx-line-chart"></i> <span>Impact
-              regression</span></a></li>
+        <li><a href="#visual-link-analysis" class="nav-link scrollto"><i class="bx bx-search"></i> <span>Visual Link Position Analysis</span></a></li>
         <li><a href="#conclusion" class="nav-link scrollto"><i class="bx bx-bulb"></i> <span>Conclusion</span></a></li>
-        <li><a href="#links" class="nav-link scrollto"><i class="bx bx-link"></i> <span>Links</span></a></li>-->
       </ul>
     </nav><!-- .nav-menu -->
 
@@ -330,25 +327,47 @@
           </p>
         </div>
 
-        <div class="row">
+        <!--<div class="row">
           <div class="col-lg-6">
-            <img src="assets/img/numberOfQuotesByYear.svg" class="img-fluid img_display" alt="">
+            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
           </div>
           <div class="col-lg-6">
-            <img src="assets/img/numberOfQuotes_Tesla.svg" class="img-fluid img_display" alt="">
+            <img src="assets/plots/cat_click1.png" class="img-fluid img_display" alt="">
           </div>
+        </div>-->
+
+       
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            The graph above presents the links of the page that the users visits in every step of the game. 
+            It is understood that in the early phases of the game users visit the hubs, while in later clicks
+            the search in narrowed down to more specific pages. 
+          </p>
         </div>
 
+        
 
         <div class="section-title" style="margin-top: 2em;">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/plots/cat_click1.png" class="img-fluid img_display" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/plots/cat_click6.png" class="img-fluid img_display" alt="">
+            </div>
+          </div>
           <p style="text-align: left;">
-            In the above graphs, we present an analysis of this user strategic behavior during the game. On the left
-            graph, we see that
-            the user actually end up to hubs in their first clicks, and then they narrow down their search to find their
-            goal article.
-            In the graph on the right, we show that usually, those hubs are articles about general entities, such as
-            countries, which tend to have
-            many links to many different topics.
+            Those graph present the categories of the visited pages after the some clicks of the game. 
+            The left graph shows the distribution of the selected categories in the first click of the game, while the graph on the right
+            shows the distribution after the sixth click.
+            We see that in the first click, <b>more than 17% of the clicks went to a country page!</b> <br>
+            In later phases of the game, for example in the sixth click, we see that the category percentages are normalized, and
+            the categories differ according to the type of the target article. The graph on the right indicates a phase of the game where the narrowing
+            down has started, and the users approaches more specific pages.
+            
           </p>
         </div>
 
@@ -405,76 +424,75 @@
           <h2>Visual Link Position Analysis</h2>
           <p style="text-align: left;">
             A wikipedia page has a specific structure, because it is divided in three important sections, lead, body and infobox. 
-            Every one of those sections
-            may contain links that a user could follow. Normally, lead in on the top of the page, containing just a descriptive paragraph about the 
-            current page, and sometimes some links directly related to the current entity. 
-
-          </p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-6">
-            <img src="assets/img/numberOfQuotesByYear.svg" class="img-fluid img_display" alt="">
-          </div>
-          <div class="col-lg-6">
-            <img src="assets/img/numberOfQuotes_Tesla.svg" class="img-fluid img_display" alt="">
-          </div>
-        </div>
-
-
-        <div class="section-title" style="margin-top: 2em;">
-          <p style="text-align: left;">
-            In the above graphs, we present an analysis of this user strategic behavior during the game. On the left
-            graph, we see that
-            the user actually end up to hubs in their first clicks, and then they narrow down their search to find their
-            goal article.
-            In the graph on the right, we show that usually, those hubs are articles about general entities, such as
-            countries, which tend to have
-            many links to many different topics.
-          </p>
-        </div>
-
-        <div class="section-title" style="margin-top: 2em;">
-          <h3>Okay, but where are those links?</h3>
-          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="50">
-            <div class="swiper-wrapper">
-  
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    In the <b>lead</b>?
-                  </p>
-                </div>
-              </div><!-- End testimonial item -->
-  
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    In the <b>main body</b>?
-                  </p>
-                </div>
-              </div><!-- End testimonial item -->
-  
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    In the <b>infobox</b>?
-                  </p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="testimonial-item">
-                  <p>
-                    In which <b>paragraph</b>?
-                  </p>
-                </div>
-              </div>
-  
-              </div><!-- End testimonial item -->
-  
             
+            Every one of those sections may contain links that a user could follow.
+            Normally, lead in on the top of the page, containing a descriptive paragraph about the 
+            current page with the corresponding links. Then, the body follows, containing multiple paragraphs and links.
+            The body of the page contains all the information available for this page. Finally, the infobox is a small frame at the right of the 
+            page, showing conclusive information about the article. Infoboxes sometimes contain links, but there are several cases where they only contain 
+            text.
+            In our data, approximately 1% of the links belong to the infobox section, thus we decided not to include them in our analysis. 
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/lead_body_click_loc.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            In the graph above we present how many links are located in the lead and in the body, and how many of them are clicked. We see 
+            that the users generally prefer the links in the lead. 
+          </p>
+        </div>
+
+        
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/par_scatter.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            The above scatter presents the ditribution of links among the paragraphs. We see that most of the links belong to the starting paragraphs 
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/plots/bar_percent_lead_body.png" class="img-fluid img_display" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/plots/lead_vs_body_links.png" class="img-fluid img_display" alt="">
+            </div>
           </div>
+          <p style="text-align: left;">
+            ADD DESCRIPTION
+            
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="row">
+            <div class="col-lg-6">
+              <img src="assets/plots/par_loc_per_click.png" class="img-fluid img_display" alt="">
+            </div>
+            <div class="col-lg-6">
+              <img src="assets/plots/links_in_per_click.png" class="img-fluid img_display" alt="">
+            </div>
+          </div>
+          <p style="text-align: left;">
+            ADD DESCRIPTION
+            
+          </p>
+        </div>
+
+        <div class="section-title" style="margin-top: 2em;">
+          <div class="col-lg-6">
+            <img src="assets/plots/expected_vs_obs_clicks.png" class="img-fluid img_display" alt="">
+          </div>  
+          <p style="text-align: left;">
+            ADD DESCRIPTION          
+          </p>
         </div>
 
         
@@ -549,19 +567,16 @@
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
-      <h3>Wikispeedia Visual Link Position Analysis</h3>
+      <h3>Wikipedia visual link position and user navigation</h3>
       <p>H. Allegre, I. Bantzis, M. Chatzakis, B. Tornare</p>
-      <!--<p style="font-style: normal; font-size: 25px; margin-top: -1em;"><b>mADAgascar</b></p>
-      <img src="assets/img/meme.png" class="img-fluid" alt="" style="width: 30%; margin-top: -2em;">-->
+      <!--<p style="font-style: normal; font-size: 25px; margin-top: -1em;"><b>mADAgascar</b></p>-->
+      <img src="assets/img/meme.png" class="img-fluid" alt="" style="width: 30%; margin-top: -2em;">
       <div class="credits" style="margin: 1em;">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: [license-url] -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/ -->
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>
-  </footer><!-- End Footer -->
+  </footer>
+  <!-- End Footer -->
 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
