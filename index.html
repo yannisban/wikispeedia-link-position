@@ -184,10 +184,10 @@
               <img src="assets/img/intro/path.svg" class="img-fluid" alt="">
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0">
-              <div class="questions">
+              <div class="questions" style="text-align: justify;">
                 Through this work, we are trying to address a number of research questions, which
-                circle around our bacis point of interest:<br> <b>How the users navigate in a Wikispeedia game</b>.
-                <br>In detail, we are trying to address the following research points:
+                circle around our bacis point of interest:<br> <br><b style="text-align: center;">How the users navigate in a Wikispeedia game?</b>
+                <br><br>In detail, we are trying to address the following research points:
                 <ul>
                   <li><i>How does the position of links in the page of affects the user behavior?</i></li>
                   <li><i>Are there specific sections in which their links are preferred in navigation?</i></li>
@@ -207,7 +207,7 @@
 
         <div class="section-title">
           <h2>Wikispeedia Data</h2>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             The Wikispeedia dataset contains multiple data. Among others,
             it provides information about the articles, their categories and their links used
             in the game, enabling us to recreate the whole Wikipedia graph.
@@ -222,7 +222,7 @@
           <div class="container" data-aos="fade-up">
             <div class="section-title">
               <h3>How big is the graph?</h3>
-              <p>
+              <p style="text-align: justify;">
                 We present here a summary of the available data for the Wikispeedia graph and paths that we used for
                 our analysis.
               </p>
@@ -272,12 +272,12 @@
               <div class="col-lg-6">
                 <img src="assets/img/wikipedia-cropped.png" class="img-fluid" alt="">
               </div>
-              <div class="col-lg-3">
-                <div class="questions">
+              <div class="col-lg-6">
+                <div class="questions" style="text-align: justify;">
                   The visualization of a graph like this is not an easy task, because almost
                   every node of the graph is connected with each other,
                   making it a challenging graph-drawing task.
-                  For this reason, before the visualization, we clustered the nodes.
+                  Using <a href="https://gephi.org/" target="_blank">Gephi</a>, before the visualization, we clustered the nodes.
                 </div>
               </div>
             </div>
@@ -292,7 +292,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <p>
-                      Africa > Coffee > Cancer > Human > Sleep (4 links, 105 seconds)
+                      Africa > Coffee > Cancer > Human > Sleep <i>(4 links, 105 seconds)</i>
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -300,7 +300,7 @@
                 <div class="swiper-slide">
                   <div class="testimonial-item">
                     <p>
-                      Pythagoras > Science > Pollution > Carbon_dioxide > Greenhouse_effect (4 links, 53 seconds)
+                      Pythagoras > Science > Pollution > Carbon_dioxide > Greenhouse_effect <i>(4 links, 53 seconds)</i>
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -309,8 +309,8 @@
                   <div class="testimonial-item">
                     <p>
                       Monty_Python > Democracy > Monarchy > Kuwait > Iraq > Saudi_Arabia > Afghanistan >
-                      Osama_bin_Laden (7
-                      links, 248 seconds)
+                      Osama_bin_Laden <i>(7
+                        links, 248 seconds)</i>
                     </p>
                   </div>
                 </div><!-- End testimonial item -->
@@ -332,13 +332,13 @@
 
         <div class="section-title">
           <h2>Game analysis</h2>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             A user facing a Wikispeedia game challenge is unlikely to reach the final goal if he randomly clicks links
             that appear in the page. To actually win the game, users need to follow a specific strategy.
           </p>
           <br>
           <h3>Wait, Wikispeedia needs a strategy?</h3>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             Well, yes! In order to win, there is a specific tactic which users seem to use. During the early phases
             of the
             game (first few clicks), users tend to follow links that might lead them to general Wikipedia pages, called
@@ -359,12 +359,12 @@
 
 
         <div class="section-title" style="margin-top: 2em;">
-          <h3>Lets see graphs!</h3>
+          <h3>Let's see graphs!</h3>
 
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/links_in_per_click.svg" class="img-fluid img_display" alt="">
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             The graph above presents the average links of the page that the users visit in every step (click) of the
             game.
             Clearly, we see that in the very early phases of the game, users visit pages with many links, the so called
@@ -385,7 +385,7 @@
               <img src="assets/plots/cat_click2.svg" class="img-fluid img_display" alt="">
             </div>
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             Those graphs present the percentange of the top categories of articles that players follow
             during the initial, "hub-searching" phase of the game. The right graph corresponds to the very
             beginning of the game, after the first click of the player, while the second corresponds to the
@@ -405,7 +405,7 @@
             </div>
           </div>
 
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             The rest of the graphs present the percentance of the top categories of articles visited during the
             "narrowing-down" phase of the game, in steps 7 and 8 respectively. <br>Here, <b>we have a more balanced
               selection of the categories and no category exceeds the percentange of 5%!</b> <br>
@@ -417,7 +417,7 @@
 
         <div class="section-title" style="margin-top: 2em;">
           <h3>Good, but <b>where</b> are those links?</h3>
-          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="3">
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="1">
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
@@ -481,7 +481,7 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Visual Link Position Analysis</h2>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             Before finding the positions of the links, it is important
             to keep in mind the structure of a typical Wikipedia page.
             A wikipedia page has a specific structure, because it is divided in three major sections, <b>the lead, the
@@ -507,7 +507,7 @@
               <img src="assets/img/layout.png" class="img-fluid" alt="">
             </a>
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             This in an example of a typical structure for an interesting Wikipedia page. We see that the page
             begins with the lead,
             on the right there is the infobox and then, the body of the page with the actual content.
@@ -515,8 +515,8 @@
         </div>
 
         <div class="section-title" style="margin-top: 2em;">
-          <h3>Lets get to the point!</h3>
-          <p style="text-align: left;">
+          <h3>Let's get to the point!</h3>
+          <p style="text-align: justify;">
             Now that we are aware of the basic statistics and analysis of the game, as well as the structure of the
             pages, we can proceed with our visual link position analysis work!
           </p>
@@ -525,7 +525,7 @@
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/scat_par.svg" class="img-fluid img_display" alt="">
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             The above graph presents the power-law-like ditribution of the number of links in each paragraph of every
             article. This means that the x-axis
             represents the position of the paragraph in the page. We conclude that <b>the most links are usually present
@@ -536,7 +536,7 @@
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/clicks_vs_links.svg" class="img-fluid img_display" alt="">
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             The right graph presents the total number of links present in lead and body section, among all the pages of
             the dataset,
             while the left graph presents the number of clicks performed among all the games in the corresponding
@@ -551,7 +551,7 @@
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/expected_vs_observed.svg" class="img-fluid img_display" alt="">
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             <b>What if the links were chosen at random? </b> We repeat every path in our dataset and for every click we
             calculate an expected click location
             based on all of the links in that particular page. The location is simply the paragraph that contains the
@@ -563,7 +563,7 @@
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/body_vs_lead_per_click.svg" class="img-fluid img_display" alt="">
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             We have plenty of evidence so far that the <b>links located in the first paragraphs are the most chosen
               ones</b>.
             Do they also contain <b>more links?</b> <b>Yes!</b>
@@ -582,7 +582,7 @@
           <div style="width: 70%; margin-left: auto; margin-right: auto">
             <img src="assets/plots/section_clicks.svg" class="img-fluid img_display" alt="">
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             <b>The percentages of sections clicked at each stage of the game remain almost equal.</b>
             On the first click, we notice a slight preference for articles in the lead section. This represents the
             strategy of the
@@ -599,7 +599,7 @@
               <img src="assets/plots/body_clicks.svg" class="img-fluid img_display" alt="">
             </div>
           </div>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             As we note from the plot on the left, the <b>first click</b> is located higher in the article on average.
             This occurs because the first introductory paragraphs
             lead to articles of higher importance and generality as seen in the plots before.
@@ -630,7 +630,7 @@
 
           <h3>Is there related work?</h3>
 
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             As we mentioned in the introduction, the field of studying the user navigation and locating semantically similar entities 
             based on the user behavior by exploiting their common sense is evolving and there are many works around this general topic. <br><br>
 
@@ -652,7 +652,7 @@
           <br>
 
           <h3>Interaction with our work</h3>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             Our research in this project is orthogonal to what we described above. Rather than studying the absolute positions of links in the screen,
             we study in which relative parts of the page the most popular links aside. Instead of having terms such as left-side, right-side etc.
             we analyze their position based on if they appear on the lead or the body, which sections are the most clicked, how the links in different sections
@@ -671,7 +671,7 @@
 
         <div class="section-title">
           <h2>Conclusion</h2>
-          <p style="text-align: left;">
+          <p style="text-align: justify;">
             The Wikispeedia dataset provided us with rich resources, helping us to analyze the user behavior when
             they navigate over the Wikipedia knowledge graph, using their common sense. After performing a wide work
             over the available data, we gained interesting insights.
