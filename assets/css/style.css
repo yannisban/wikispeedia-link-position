@@ -1050,3 +1050,9 @@ section {
 #footer .credits {
   font-size: 13px;
 }
+#footer .container img {
+  margin-right: 80px;
+ }
+ #footer .container {
+  margin-right: auto;
+ }
